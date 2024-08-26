@@ -3,8 +3,9 @@ import {
     SheetContent,
     SheetTrigger,
   } from '@/components/ui/sheet';
-  import { AlignJustify, Apple } from 'lucide-react';
+  import { AlignRight, Apple } from 'lucide-react';
   import Link from 'next/link';
+ 
   
   export default function MobileNav({ isScrolled }) {
     return (
@@ -14,7 +15,7 @@ import {
         </Link>
         <Sheet>
           <SheetTrigger className="text-white transition-colors duration-300">
-            <AlignJustify />
+          <AlignRight />
           </SheetTrigger>
           <SheetContent side='right' className="bg-gray-900">
             <nav className='flex flex-col gap-3 mt-6'>

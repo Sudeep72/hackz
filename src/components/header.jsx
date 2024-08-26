@@ -15,23 +15,23 @@ export default function Header() {
   }, []);
 
   return (
-    <header
-      className={`fixed top-0 w-full transition-all duration-300 z-50 ${
-        isScrolled 
-          ? 'my-2 bg-transparent backdrop-blur-md backdrop-brightness-200 rounded-xl'
-          : 'bg-transparent'
-      }`}
-    >
-      <div
-        className={`w-full ${isScrolled ? 'px-4' : 'px-8'} mx-auto`}
-      >
-        <div className="h-16 flex items-center justify-between">
-          {/* Desktop */}
-          <MainNav isScrolled={isScrolled} />
-          {/* Mobile */}
-          <MobileNav isScrolled={isScrolled} />
+    <div className="fixed top-0 w-full z-50">
+      <div className={`mx-auto max-w-screen-xl ${isScrolled ? 'px-2' : ''}`}>
+        <div
+          className={`transition-all duration-300 ${
+            isScrolled
+              ? 'bg-transparent backdrop-blur-xl backdrop-brightness-200 rounded-xl my-2'
+              : 'bg-transparent'
+          }`}
+        >
+          <div className="h-16 flex items-center justify-between px-4 text-sm">
+            {/* Desktop */}
+            <MainNav isScrolled={isScrolled} />
+            {/* Mobile */}
+            <MobileNav isScrolled={isScrolled} />
+          </div>
         </div>
       </div>
-    </header>
+    </div>
   );
 }

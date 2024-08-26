@@ -6,14 +6,14 @@ export default function MainNav({ isScrolled }) {
     <div
       className={`hidden md:flex justify-between items-center w-full transition-all duration-300 ${
         isScrolled 
-          ? 'rounded-xl backdrop-blur-md mx-28 backdrop-brightness-200'
+          ? 'rounded-xl backdrop-blur-md px-12 backdrop-brightness-200'
           : ''
       }`}
     >
       <Link href='/'>
         <Apple className="text-white transition-colors duration-300" />
       </Link>
-      <nav className='flex items-center gap-3 lg:gap-4'>
+      <nav className='flex items-center gap-6 lg:gap-8'>
         {['About', 'Sponsors', 'Prizes', 'Rules', 'Themes', 'Timeline', 'FAQs', 'Contact'].map((item) => (
           <Link
             key={item}
