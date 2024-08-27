@@ -424,7 +424,7 @@ export default function GlobeTestDemo() {
               <p className="text-xs ml-4 uppercase font-medium">Anna University, Chennai</p>
             </div>
           </div>
-          <div className="w-5/6 md:w-1/2 h-96 md:h-[500px] md:ml-auto">
+          <div className="w-full md:w-1/2 h-96 md:h-[500px] md:ml-auto">
             <World data={sampleArcs} globeConfig={globeConfig} />
           </div>
         </div>
