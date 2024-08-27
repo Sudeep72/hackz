@@ -3,11 +3,13 @@ import Link from "next/link";
 import Nav from "@/components/header";
 
 export default function Home() {
-  return(
+  return (
     <>
-    <Nav />
-    <Link href="/test"> Test </Link>
-    <Link href="/test2"> Test2 </Link>
+      <Nav />
+      <div className="mt-16">
+        <Link href="/test">Test</Link>
+        <Link href="/test2">Test2</Link>
+      </div>
     </>
   );
 }
