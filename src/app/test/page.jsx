@@ -1,103 +1,426 @@
 "use client";
-
-import Image from "next/image";
 import React from "react";
-import { CardBody, CardContainer, CardItem } from "@/components/ui/3d-card";
+import dynamic from "next/dynamic";
+import { BackgroundBeams } from "@/components/ui/background-beams";
 import Nav from "@/components/header";
 
-export default function ThreeDCardDemo() {
+const World = dynamic(
+  () => import("@/components/ui/globe").then((m) => m.World),
+  {
+    ssr: false,
+  }
+);
+
+export default function GlobeTestDemo() {
+  const globeConfig = {
+    pointSize: 4,
+    globeColor: "#062056",
+    showAtmosphere: true,
+    atmosphereColor: "#FFFFFF",
+    atmosphereAltitude: 0.1,
+    emissive: "#062056",
+    emissiveIntensity: 0.1,
+    shininess: 0.9,
+    polygonColor: "rgba(255,255,255,0.7)",
+    ambientLight: "#38bdf8",
+    directionalLeftLight: "#ffffff",
+    directionalTopLight: "#ffffff",
+    pointLight: "#ffffff",
+    arcTime: 1000,
+    arcLength: 0.9,
+    rings: 1,
+    maxRings: 3,
+    initialPosition: { lat: 22.3193, lng: 114.1694 },
+    autoRotate: true,
+    autoRotateSpeed: 0.5,
+  };
+
+  const colors = ["#06b6d4", "#3b82f6", "#6366f1"];
+  const sampleArcs = [
+    {
+      order: 1,
+      startLat: -19.885592,
+      startLng: -43.951191,
+      endLat: -22.9068,
+      endLng: -43.1729,
+      arcAlt: 0.1,
+      color: colors[Math.floor(Math.random() * (colors.length - 1))],
+    },
+    {
+      order: 1,
+      startLat: 28.6139,
+      startLng: 77.209,
+      endLat: 3.139,
+      endLng: 101.6869,
+      arcAlt: 0.2,
+      color: colors[Math.floor(Math.random() * (colors.length - 1))],
+    },
+    {
+      order: 1,
+      startLat: -19.885592,
+      startLng: -43.951191,
+      endLat: -1.303396,
+      endLng: 36.852443,
+      arcAlt: 0.5,
+      color: colors[Math.floor(Math.random() * (colors.length - 1))],
+    },
+    {
+      order: 2,
+      startLat: 1.3521,
+      startLng: 103.8198,
+      endLat: 35.6762,
+      endLng: 139.6503,
+      arcAlt: 0.2,
+      color: colors[Math.floor(Math.random() * (colors.length - 1))],
+    },
+    {
+      order: 2,
+      startLat: 51.5072,
+      startLng: -0.1276,
+      endLat: 3.139,
+      endLng: 101.6869,
+      arcAlt: 0.3,
+      color: colors[Math.floor(Math.random() * (colors.length - 1))],
+    },
+    {
+      order: 2,
+      startLat: -15.785493,
+      startLng: -47.909029,
+      endLat: 36.162809,
+      endLng: -115.119411,
+      arcAlt: 0.3,
+      color: colors[Math.floor(Math.random() * (colors.length - 1))],
+    },
+    {
+      order: 3,
+      startLat: -33.8688,
+      startLng: 151.2093,
+      endLat: 22.3193,
+      endLng: 114.1694,
+      arcAlt: 0.3,
+      color: colors[Math.floor(Math.random() * (colors.length - 1))],
+    },
+    {
+      order: 3,
+      startLat: 21.3099,
+      startLng: -157.8581,
+      endLat: 40.7128,
+      endLng: -74.006,
+      arcAlt: 0.3,
+      color: colors[Math.floor(Math.random() * (colors.length - 1))],
+    },
+    {
+      order: 3,
+      startLat: -6.2088,
+      startLng: 106.8456,
+      endLat: 51.5072,
+      endLng: -0.1276,
+      arcAlt: 0.3,
+      color: colors[Math.floor(Math.random() * (colors.length - 1))],
+    },
+    {
+      order: 4,
+      startLat: 11.986597,
+      startLng: 8.571831,
+      endLat: -15.595412,
+      endLng: -56.05918,
+      arcAlt: 0.5,
+      color: colors[Math.floor(Math.random() * (colors.length - 1))],
+    },
+    {
+      order: 4,
+      startLat: -34.6037,
+      startLng: -58.3816,
+      endLat: 22.3193,
+      endLng: 114.1694,
+      arcAlt: 0.7,
+      color: colors[Math.floor(Math.random() * (colors.length - 1))],
+    },
+    {
+      order: 4,
+      startLat: 51.5072,
+      startLng: -0.1276,
+      endLat: 48.8566,
+      endLng: -2.3522,
+      arcAlt: 0.1,
+      color: colors[Math.floor(Math.random() * (colors.length - 1))],
+    },
+    {
+      order: 5,
+      startLat: 14.5995,
+      startLng: 120.9842,
+      endLat: 51.5072,
+      endLng: -0.1276,
+      arcAlt: 0.3,
+      color: colors[Math.floor(Math.random() * (colors.length - 1))],
+    },
+    {
+      order: 5,
+      startLat: 1.3521,
+      startLng: 103.8198,
+      endLat: -33.8688,
+      endLng: 151.2093,
+      arcAlt: 0.2,
+      color: colors[Math.floor(Math.random() * (colors.length - 1))],
+    },
+    {
+      order: 5,
+      startLat: 34.0522,
+      startLng: -118.2437,
+      endLat: 48.8566,
+      endLng: -2.3522,
+      arcAlt: 0.2,
+      color: colors[Math.floor(Math.random() * (colors.length - 1))],
+    },
+    {
+      order: 6,
+      startLat: -15.432563,
+      startLng: 28.315853,
+      endLat: 1.094136,
+      endLng: -63.34546,
+      arcAlt: 0.7,
+      color: colors[Math.floor(Math.random() * (colors.length - 1))],
+    },
+    {
+      order: 6,
+      startLat: 37.5665,
+      startLng: 126.978,
+      endLat: 35.6762,
+      endLng: 139.6503,
+      arcAlt: 0.1,
+      color: colors[Math.floor(Math.random() * (colors.length - 1))],
+    },
+    {
+      order: 6,
+      startLat: 22.3193,
+      startLng: 114.1694,
+      endLat: 51.5072,
+      endLng: -0.1276,
+      arcAlt: 0.3,
+      color: colors[Math.floor(Math.random() * (colors.length - 1))],
+    },
+    {
+      order: 7,
+      startLat: -19.885592,
+      startLng: -43.951191,
+      endLat: -15.595412,
+      endLng: -56.05918,
+      arcAlt: 0.1,
+      color: colors[Math.floor(Math.random() * (colors.length - 1))],
+    },
+    {
+      order: 7,
+      startLat: 48.8566,
+      startLng: -2.3522,
+      endLat: 52.52,
+      endLng: 13.405,
+      arcAlt: 0.1,
+      color: colors[Math.floor(Math.random() * (colors.length - 1))],
+    },
+    {
+      order: 7,
+      startLat: 52.52,
+      startLng: 13.405,
+      endLat: 34.0522,
+      endLng: -118.2437,
+      arcAlt: 0.2,
+      color: colors[Math.floor(Math.random() * (colors.length - 1))],
+    },
+    {
+      order: 8,
+      startLat: -8.833221,
+      startLng: 13.264837,
+      endLat: -33.936138,
+      endLng: 18.436529,
+      arcAlt: 0.2,
+      color: colors[Math.floor(Math.random() * (colors.length - 1))],
+    },
+    {
+      order: 8,
+      startLat: 49.2827,
+      startLng: -123.1207,
+      endLat: 52.3676,
+      endLng: 4.9041,
+      arcAlt: 0.2,
+      color: colors[Math.floor(Math.random() * (colors.length - 1))],
+    },
+    {
+      order: 8,
+      startLat: 1.3521,
+      startLng: 103.8198,
+      endLat: 40.7128,
+      endLng: -74.006,
+      arcAlt: 0.5,
+      color: colors[Math.floor(Math.random() * (colors.length - 1))],
+    },
+    {
+      order: 9,
+      startLat: 51.5072,
+      startLng: -0.1276,
+      endLat: 34.0522,
+      endLng: -118.2437,
+      arcAlt: 0.2,
+      color: colors[Math.floor(Math.random() * (colors.length - 1))],
+    },
+    {
+      order: 9,
+      startLat: 22.3193,
+      startLng: 114.1694,
+      endLat: -22.9068,
+      endLng: -43.1729,
+      arcAlt: 0.7,
+      color: colors[Math.floor(Math.random() * (colors.length - 1))],
+    },
+    {
+      order: 9,
+      startLat: 1.3521,
+      startLng: 103.8198,
+      endLat: -34.6037,
+      endLng: -58.3816,
+      arcAlt: 0.5,
+      color: colors[Math.floor(Math.random() * (colors.length - 1))],
+    },
+    {
+      order: 10,
+      startLat: -22.9068,
+      startLng: -43.1729,
+      endLat: 28.6139,
+      endLng: 77.209,
+      arcAlt: 0.7,
+      color: colors[Math.floor(Math.random() * (colors.length - 1))],
+    },
+    {
+      order: 10,
+      startLat: 34.0522,
+      startLng: -118.2437,
+      endLat: 31.2304,
+      endLng: 121.4737,
+      arcAlt: 0.3,
+      color: colors[Math.floor(Math.random() * (colors.length - 1))],
+    },
+    {
+      order: 10,
+      startLat: -6.2088,
+      startLng: 106.8456,
+      endLat: 52.3676,
+      endLng: 4.9041,
+      arcAlt: 0.3,
+      color: colors[Math.floor(Math.random() * (colors.length - 1))],
+    },
+    {
+      order: 11,
+      startLat: 41.9028,
+      startLng: 12.4964,
+      endLat: 34.0522,
+      endLng: -118.2437,
+      arcAlt: 0.2,
+      color: colors[Math.floor(Math.random() * (colors.length - 1))],
+    },
+    {
+      order: 11,
+      startLat: -6.2088,
+      startLng: 106.8456,
+      endLat: 31.2304,
+      endLng: 121.4737,
+      arcAlt: 0.2,
+      color: colors[Math.floor(Math.random() * (colors.length - 1))],
+    },
+    {
+      order: 11,
+      startLat: 22.3193,
+      startLng: 114.1694,
+      endLat: 1.3521,
+      endLng: 103.8198,
+      arcAlt: 0.2,
+      color: colors[Math.floor(Math.random() * (colors.length - 1))],
+    },
+    {
+      order: 12,
+      startLat: 34.0522,
+      startLng: -118.2437,
+      endLat: 37.7749,
+      endLng: -122.4194,
+      arcAlt: 0.1,
+      color: colors[Math.floor(Math.random() * (colors.length - 1))],
+    },
+    {
+      order: 12,
+      startLat: 35.6762,
+      startLng: 139.6503,
+      endLat: 22.3193,
+      endLng: 114.1694,
+      arcAlt: 0.2,
+      color: colors[Math.floor(Math.random() * (colors.length - 1))],
+    },
+    {
+      order: 12,
+      startLat: 22.3193,
+      startLng: 114.1694,
+      endLat: 34.0522,
+      endLng: -118.2437,
+      arcAlt: 0.3,
+      color: colors[Math.floor(Math.random() * (colors.length - 1))],
+    },
+    {
+      order: 13,
+      startLat: 52.52,
+      startLng: 13.405,
+      endLat: 22.3193,
+      endLng: 114.1694,
+      arcAlt: 0.3,
+      color: colors[Math.floor(Math.random() * (colors.length - 1))],
+    },
+    {
+      order: 13,
+      startLat: 11.986597,
+      startLng: 8.571831,
+      endLat: 35.6762,
+      endLng: 139.6503,
+      arcAlt: 0.3,
+      color: colors[Math.floor(Math.random() * (colors.length - 1))],
+    },
+    {
+      order: 13,
+      startLat: -22.9068,
+      startLng: -43.1729,
+      endLat: -34.6037,
+      endLng: -58.3816,
+      arcAlt: 0.1,
+      color: colors[Math.floor(Math.random() * (colors.length - 1))],
+    },
+    {
+      order: 14,
+      startLat: -33.936138,
+      startLng: 18.436529,
+      endLat: 21.395643,
+      endLng: 39.883798,
+      arcAlt: 0.3,
+      color: colors[Math.floor(Math.random() * (colors.length - 1))],
+    },
+  ];
+
   return (
-    <div>
-    <Nav />
-    <CardContainer className="inter-var">
-      <CardBody
-        className="bg-gray-50 relative group/card  dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] dark:bg-black dark:border-white/[0.2] border-black/[0.1] w-auto sm:w-[30rem] h-auto rounded-xl p-6 border  ">
-        <CardItem
-          translateZ="50"
-          className="text-xl font-bold text-neutral-600 dark:text-white">
-          Make things float in air
-        </CardItem>
-        <CardItem
-          as="p"
-          translateZ="60"
-          className="text-neutral-500 text-sm max-w-sm mt-2 dark:text-neutral-300">
-          Hover over this card to unleash the power of CSS perspective
-        </CardItem>
-        <CardItem translateZ="100" rotateX={20} rotateZ={-10} className="w-full mt-4">
-          <Image
-            src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?q=80&w=2560&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-            height="1000"
-            width="1000"
-            className="h-60 w-full object-cover rounded-xl group-hover/card:shadow-xl"
-            alt="thumbnail" />
-        </CardItem>
-        <div className="flex justify-between items-center mt-20">
-          <CardItem
-            translateZ={20}
-            translateX={-40}
-            as="button"
-            className="px-4 py-2 rounded-xl text-xs font-normal dark:text-white">
-            Try now →
-          </CardItem>
-          <CardItem
-            translateZ={20}
-            translateX={40}
-            as="button"
-            className="px-4 py-2 rounded-xl bg-black dark:bg-white dark:text-black text-white text-xs font-bold">
-            Sign up
-          </CardItem>
+    <div className="relative">
+      <Nav />
+      <BackgroundBeams />
+      <div className="mt-20">
+      <div className="flex flex-col md:flex-row items-center justify-center text-center mt-12 md:mt-24 px-4 md:px-12">
+        <div className="flex flex-col items-center text-center md:items-start mb-6 mx-auto md:mb-0 z-10">
+          <h2 className="text-2xl md:text-3xl font-bold mb-2 text-cyan-300 tracking-widest">CSEA </h2>
+          <h4 className="text-base md:text-base font-semibold mb-2 text-cyan-300 uppercase">Presents</h4>
+          <h1 className="text-5xl md:text-7xl font-extrabold mb-4 text-transparent bg-clip-text bg-gradient-to-r from-pink-300 to-pink-600 tracking-widest">
+            HACK&apos;Z
+          </h1>
+          <p className="text-base md:text-base font-semibold uppercase mb-6">24-Hour National Hackathon</p>
+          <div className="bg-green-800 inline-block px-4 py-2 rounded-full mb-6">
+            <p className="text-lg">Anna University, Chennai</p>
+          </div>
         </div>
-      </CardBody>
-    </CardContainer>
-     <CardContainer className="inter-var">
-     <CardBody className="bg-gray-50 relative group/card  dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] dark:bg-black dark:border-white/[0.2] border-black/[0.1] w-auto sm:w-[30rem] h-auto rounded-xl p-6 border  ">
-       <CardItem
-         translateZ="50"
-         className="text-xl font-bold text-neutral-600 dark:text-white"
-       >
-         Make things float in air
-       </CardItem>
-       <CardItem
-         as="p"
-         translateZ="60"
-         className="text-neutral-500 text-sm max-w-sm mt-2 dark:text-neutral-300"
-       >
-         Hover over this card to unleash the power of CSS perspective
-       </CardItem>
-       <CardItem
-         translateZ="100"
-         rotateX={20}
-         rotateZ={-10}
-         className="w-full mt-4"
-       >
-         <Image
-           src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?q=80&w=2560&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-           height="1000"
-           width="1000"
-           className="h-60 w-full object-cover rounded-xl group-hover/card:shadow-xl"
-           alt="thumbnail"
-         />
-       </CardItem>
-       <div className="flex justify-between items-center mt-20">
-         <CardItem
-           translateZ={20}
-           translateX={-40}
-           as="button"
-           className="px-4 py-2 rounded-xl text-xs font-normal dark:text-white"
-         >
-           Try now →
-         </CardItem>
-         <CardItem
-           translateZ={20}
-           translateX={40}
-           as="button"
-           className="px-4 py-2 rounded-xl bg-black dark:bg-white dark:text-black text-white text-xs font-bold"
-         >
-           Sign up
-         </CardItem>
-       </div>
-     </CardBody>
-   </CardContainer>
-   </div>
+        <div className="w-5/6 md:w-1/2 h-96 md:h-[500px] md:ml-auto">
+          <World data={sampleArcs} globeConfig={globeConfig} />
+        </div>
+      </div>
+      </div>
+    </div>
   );
 }

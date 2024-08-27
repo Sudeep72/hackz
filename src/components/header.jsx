@@ -24,7 +24,7 @@ export default function Header() {
               : 'bg-transparent'
           }`}
         >
-          <div className="h-16 flex items-center justify-between px-4 text-sm">
+          <div className="h-16 flex items-center justify-between px-4 text-sm mt-2">
             {/* Desktop */}
             <MainNav isScrolled={isScrolled} />
             {/* Mobile */}
