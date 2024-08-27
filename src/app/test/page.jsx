@@ -3,6 +3,7 @@ import React from "react";
 import dynamic from "next/dynamic";
 import { BackgroundBeams } from "@/components/ui/background-beams";
 import Nav from "@/components/header";
+import { MapPinMinus } from "lucide-react";
 
 const World = dynamic(
   () => import("@/components/ui/globe").then((m) => m.World),
@@ -404,22 +405,29 @@ export default function GlobeTestDemo() {
       <Nav />
       <BackgroundBeams />
       <div className="mt-20">
-      <div className="flex flex-col md:flex-row items-center justify-center text-center mt-12 md:mt-24 px-4 md:px-12">
-        <div className="flex flex-col items-center text-center md:items-start mb-6 mx-auto md:mb-0 z-10">
-          <h2 className="text-2xl md:text-3xl font-bold mb-2 text-cyan-300 tracking-widest">CSEA </h2>
-          <h4 className="text-base md:text-base font-semibold mb-2 text-cyan-300 uppercase">Presents</h4>
-          <h1 className="text-5xl md:text-7xl font-extrabold mb-4 text-transparent bg-clip-text bg-gradient-to-r from-pink-300 to-pink-600 tracking-widest">
-            HACK&apos;Z
-          </h1>
-          <p className="text-base md:text-base font-semibold uppercase mb-6">24-Hour National Hackathon</p>
-          <div className="bg-green-800 inline-block px-4 py-2 rounded-full mb-6">
-            <p className="text-lg">Anna University, Chennai</p>
+        <div className="flex flex-col md:flex-row items-center justify-center text-center mt-12 md:mt-24 px-4 md:px-12">
+          <div className="flex flex-col items-center text-center md:items-start mb-6 mx-auto md:mb-0 z-10">
+            <h2 className="text-2xl md:text-3xl font-bold mb-2 text-cyan-300 tracking-widest">
+              CSEA{" "}
+            </h2>
+            <h4 className="text-base md:text-base font-semibold mb-2 text-cyan-300 uppercase">
+              Presents
+            </h4>
+            <h1 className="text-5xl md:text-7xl font-extrabold mb-4 text-transparent bg-clip-text bg-gradient-to-r from-pink-300 to-pink-600 tracking-widest">
+              HACK&apos;Z
+            </h1>
+            <p className="text-base md:text-base font-semibold uppercase mb-6">
+              24-Hour National Hackathon
+            </p>
+            <div className="bg-green-900 inline-block px-4 py-2 rounded-full mb-6 relative text-gray-400 transition-all ease-in-out duration-300 hover:bg-green-600 hover:text-white">
+              <MapPinMinus className="absolute left-2 top-1/2 transform -translate-y-1/2" size={16} strokeWidth={2.5}/>
+              <p className="text-xs ml-4 uppercase font-medium">Anna University, Chennai</p>
+            </div>
+          </div>
+          <div className="w-5/6 md:w-1/2 h-96 md:h-[500px] md:ml-auto">
+            <World data={sampleArcs} globeConfig={globeConfig} />
           </div>
         </div>
-        <div className="w-5/6 md:w-1/2 h-96 md:h-[500px] md:ml-auto">
-          <World data={sampleArcs} globeConfig={globeConfig} />
-        </div>
-      </div>
       </div>
     </div>
   );
