@@ -7,8 +7,8 @@ export default function Home() {
     <>
       <Nav />
       <div className="mt-16">
-        <Link href="/home">Home</Link>
-        <Link href="/timer">Timer</Link>
+        <Link href="/test1">Home</Link>
+        <Link href="/test2">Timer</Link>
       </div>
     </>
   );
