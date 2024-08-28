@@ -2,6 +2,7 @@
 import React from "react";
 import dynamic from "next/dynamic";
 import { BackgroundBeams } from "@/components/ui/background-beams";
+import { SparklesCore } from "@/components/ui/sparkles";
 import Nav from "@/components/header";
 import { MapPinMinus } from "lucide-react";
 
@@ -403,7 +404,16 @@ export default function GlobeTestDemo() {
   return (
     <div className="relative">
       <Nav />
+      <SparklesCore
+          id="tsparticlesfullpage"
+          background="transparent"
+          minSize={0.6}
+          maxSize={1.4}
+          particleDensity={100}
+          className="w-full h-full"
+          particleColor="#FFFFFF" />
       <BackgroundBeams />
+      
       <div className="mt-20">
         <div className="flex flex-col md:flex-row items-center justify-center text-center mt-12 md:mt-24 px-4 md:px-12">
           <div className="flex flex-col items-center text-center md:items-start mb-6 mx-auto md:mb-0 z-10">
