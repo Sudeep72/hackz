@@ -4,11 +4,7 @@ const nextConfig = {
     remotePatterns: [
       {
         protocol: 'https',
-        hostname: 'images.unsplash.com',
-      },
-      {
-        protocol: 'https',
-        hostname: 'assets.aceternity.com',
+        hostname: 'api.microlink.io',
       },
     ],
   },
