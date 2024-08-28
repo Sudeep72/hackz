@@ -57,7 +57,7 @@ export const TextHoverEffect = ({ text, duration }) => {
         </mask>
       </defs>
       <text
-        x="49%"
+        x="47%"
         y="50%"
         textAnchor="middle"
         dominantBaseline="middle"
@@ -68,7 +68,7 @@ export const TextHoverEffect = ({ text, duration }) => {
         {text}
       </text>
       <motion.text
-        x="49%"
+        x="47%"
         y="50%"
         textAnchor="middle"
         dominantBaseline="middle"
@@ -81,7 +81,7 @@ export const TextHoverEffect = ({ text, duration }) => {
         {text}
       </motion.text>
       <text
-        x="49%"
+        x="47%"
         y="50%"
         textAnchor="middle"
         dominantBaseline="middle"
