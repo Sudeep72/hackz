@@ -402,19 +402,22 @@ export default function GlobeTestDemo() {
   ];
 
   return (
-    <div className="relative">
-      <Nav />
-      <SparklesCore
+    <div className="relative overflow-hidden min-h-screen">
+      <div className="absolute inset-0 z-0">
+        <SparklesCore
           id="tsparticlesfullpage"
           background="transparent"
           minSize={0.6}
           maxSize={1.4}
           particleDensity={100}
           className="w-full h-full"
-          particleColor="#FFFFFF" />
-      <BackgroundBeams />
+          particleColor="#FFFFFF"
+        />
+      </div>
+      <Nav className="relative z-10" />
+      <BackgroundBeams className="z-10" />
       
-      <div className="mt-20">
+      <div className="mt-20 relative z-10">
         <div className="flex flex-col md:flex-row items-center justify-center text-center mt-12 md:mt-24 px-4 md:px-12">
           <div className="flex flex-col items-center text-center md:items-start mb-6 mx-auto md:mb-0 z-10">
             <h2 className="text-2xl md:text-3xl font-bold mb-2 text-cyan-300 tracking-widest">
