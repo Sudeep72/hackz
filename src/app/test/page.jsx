@@ -416,7 +416,7 @@ export default function GlobeTestDemo() {
       </div>
       <Nav className="relative z-10" />
       <BackgroundBeams className="z-10" />
-      
+
       <div className="mt-20 relative z-10">
         <div className="flex flex-col md:flex-row items-center justify-center text-center mt-12 md:mt-24 px-4 md:px-12">
           <div className="flex flex-col items-center text-center md:items-start mb-6 mx-auto md:mb-0 z-10">
@@ -427,14 +427,20 @@ export default function GlobeTestDemo() {
               Presents
             </h4>
             <h1 className="text-5xl md:text-7xl font-extrabold mb-4 text-transparent bg-clip-text bg-gradient-to-r from-pink-300 to-pink-600 tracking-widest">
-              HACK&apos;Z
+              HACKZ&apos;24
             </h1>
             <p className="text-base md:text-base font-semibold uppercase mb-6">
               24-Hour National Hackathon
             </p>
             <div className="bg-green-900 inline-block px-4 py-2 rounded-full mb-6 relative text-gray-400 transition-all ease-in-out duration-300 hover:bg-green-600 hover:text-white">
-              <MapPinMinus className="absolute left-2 top-1/2 transform -translate-y-1/2" size={16} strokeWidth={2.5}/>
-              <p className="text-xs ml-4 uppercase font-medium">Anna University, Chennai</p>
+              <MapPinMinus
+                className="absolute left-2 top-1/2 transform -translate-y-1/2"
+                size={16}
+                strokeWidth={2.5}
+              />
+              <p className="text-xs ml-4 uppercase font-medium">
+                Anna University, Chennai
+              </p>
             </div>
           </div>
           <div className="w-full md:w-1/2 h-96 md:h-[500px] md:ml-auto">
