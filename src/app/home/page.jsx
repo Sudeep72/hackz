@@ -6,7 +6,6 @@ import { SparklesCore } from "@/components/ui/sparkles";
 import { TextHoverEffect } from "@/components/ui/text-hover-effect";
 import Nav from "@/components/header";
 import { MapPinMinus } from "lucide-react";
-import Timer from "@/components/timer";
 
 const World = dynamic(
   () => import("@/components/ui/globe").then((m) => m.World),
@@ -419,7 +418,7 @@ export default function Home() {
       <Nav className="relative z-10" />
       <BackgroundBeams className="z-10" />
 
-      <div className="mt-20 relative z-10">
+      <div className="mt-20 relative z-10 min-h-screen">
         <div className="flex flex-col md:flex-row items-center justify-center text-center mt-12 md:mt-24 px-4 md:px-12">
           <div className="flex flex-col items-center text-center md:items-start mb-6 mx-auto md:mb-0 z-10">
             <h2 className="text-4xl md:text-4xl md:ml-16 font-bold mb-2 text-transparent bg-clip-text bg-gradient-to-r from-yellow-500 via-red-500 to-cyan-500 tracking-widest">
@@ -451,7 +450,6 @@ export default function Home() {
           </div>
         </div>
       </div>
-      {/* <Timer /> */}
     </div>
   );
 }
