@@ -19,7 +19,7 @@ import {
           </SheetTrigger>
           <SheetContent side='right' className="bg-gray-900">
             <nav className='flex flex-col gap-3 mt-6'>
-              {['About', 'Sponsors', 'Prizes', 'Rules', 'Themes', 'Timeline', 'FAQs', 'Contact'].map((item) => (
+              {['About', 'Sponsors', 'Prizes', 'Rules', 'Tracks', 'Timeline', 'FAQs', 'Contact'].map((item) => (
                 <Link key={item} href={`/${item.toLowerCase()}`} className="text-white hover:text-gray-300">
                   {item}
                 </Link>

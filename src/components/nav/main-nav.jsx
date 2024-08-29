@@ -14,7 +14,7 @@ export default function MainNav({ isScrolled }) {
         <Apple className="text-white transition-colors duration-300" />
       </Link>
       <nav className='flex items-center gap-6 lg:gap-8'>
-        {['About', 'Sponsors', 'Prizes', 'Rules', 'Themes', 'Timeline', 'FAQs', 'Contact'].map((item) => (
+        {['About', 'Sponsors', 'Prizes', 'Rules', 'Tracks', 'Timeline', 'FAQs', 'Contact'].map((item) => (
           <Link
             key={item}
             href={`/${item.toLowerCase()}`}

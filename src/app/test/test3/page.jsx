@@ -1,11 +1,26 @@
 import React from "react";
 import { CardSpotlight } from "@/components/ui/card-spotlight";
 import { LinkPreview } from "@/components/ui/link-preview";
+import { BackgroundBeams } from "@/components/ui/background-beams";
+import { SparklesCore } from "@/components/ui/sparkles";
 
 export default function About() {
   return (
+    <>
+    <div className="absolute inset-0 z-20">
+        <SparklesCore
+          id="tsparticlesfullpage"
+          background="transparent"
+          minSize={0.6}
+          maxSize={1.4}
+          particleDensity={100}
+          className="w-full h-full"
+          particleColor="#FFFFFF"
+        />
+      </div>
+      <BackgroundBeams className="absolute inset-0 z-20" />
     <div className="flex justify-center items-center min-h-screen mx-4">
-      <CardSpotlight className="h-auto w-full max-w-3xl p-6 bg-transparent">
+      <CardSpotlight className="h-auto w-full max-w-3xl p-6 bg-transparent ">
         <p className="text-2xl font-bold relative z-20 mt-2 text-white text-center">
           What is K! Hacks?
         </p>
@@ -18,5 +33,6 @@ export default function About() {
         </div>
       </CardSpotlight>
     </div>
+    </>
   );
 }

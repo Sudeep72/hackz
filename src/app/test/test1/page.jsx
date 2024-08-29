@@ -1,8 +1,8 @@
 "use client";
 import React from "react";
 import dynamic from "next/dynamic";
-// import { BackgroundBeams } from "@/components/ui/background-beams";
-// import { SparklesCore } from "@/components/ui/sparkles";
+import { BackgroundBeams } from "@/components/ui/background-beams";
+import { SparklesCore } from "@/components/ui/sparkles";
 import { TextHoverEffect } from "@/components/ui/text-hover-effect";
 import { MapPinMinus } from "lucide-react";
 
@@ -402,19 +402,19 @@ export default function Home() {
   ];
 
   return (
-    // <div className="relative overflow-hidden min-h-screen">
-    //   <div className="absolute inset-0 z-10">
-    //     <SparklesCore
-    //       id="tsparticlesfullpage"
-    //       background="transparent"
-    //       minSize={0.6}
-    //       maxSize={1.4}
-    //       particleDensity={100}
-    //       className="w-full h-full"
-    //       particleColor="#FFFFFF"
-    //     />
-    //   </div>
-    //   <BackgroundBeams className="z-10" />
+    <div className="relative overflow-hidden min-h-screen">
+      <div className="absolute inset-0 z-10">
+        <SparklesCore
+          id="tsparticlesfullpage"
+          background="transparent"
+          minSize={0.6}
+          maxSize={1.4}
+          particleDensity={100}
+          className="w-full h-full"
+          particleColor="#FFFFFF"
+        />
+      </div>
+      <BackgroundBeams className="z-10" />
 
       <div className="mt-20 relative z-10 min-h-screen">
         <div className="flex flex-col md:flex-row items-center justify-center text-center mt-12 md:mt-24 px-4 md:px-12">
@@ -448,6 +448,6 @@ export default function Home() {
           </div>
         </div>
       </div>
-    // </div>
+    </div>
   );
 }
