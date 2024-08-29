@@ -39,7 +39,7 @@ export function TimerComponent() {
   }, []);
 
   return (
-    <div className="relative z-10 mx-4">
+    <div className="relative z-10 mx-2">
       {/* <div className="absolute inset-0 z-20">
         <BackgroundBeams />
       </div> */}
