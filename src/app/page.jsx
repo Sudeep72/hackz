@@ -1,3 +1,4 @@
+// app/page.tsx or src/pages/index.tsx
 "use client";
 
 import { SparklesCore } from "@/components/ui/sparkles";
@@ -8,6 +9,11 @@ import About from "./sections/About";
 import Tracks from "./sections/Tracks";
 import TimeLine from "./sections/TimeLine";
 
+// Lazy load BackgroundBeams
+const BackgroundBeams = dynamic(() => import('@/components/ui/background-beams'), {
+  ssr: false // Ensure this component is only rendered on the client-side
+});
+
 const Timer = dynamic(
   () => import("./sections/Timer").then((mod) => mod.TimerComponent),
   { ssr: false }
@@ -16,6 +22,7 @@ const Timer = dynamic(
 export default function Home() {
   return (
     <div className="relative min-h-screen scroll-smooth">
+      <BackgroundBeams className="absolute inset-0 z-0" />
       <div className="absolute inset-0 z-20">
         <SparklesCore
           id="tsparticlesfullpage"

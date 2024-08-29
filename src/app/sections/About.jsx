@@ -7,7 +7,7 @@ import { LinkPreview } from "@/components/ui/link-preview";
 export default function About() {
   return (
     <div className="flex justify-center items-center mx-4 mb-48 ">
-      <BackgroundBeams className="absolute inset-0 z-0" /> 
+      {/* <BackgroundBeams className="absolute inset-0 z-0" />  */}
       <CardSpotlight className="h-auto w-full max-w-3xl p-6 bg-transparent relative z-20">
         <p className="text-2xl font-bold relative z-20 mt-2 text-white text-center">
           What is K! Hacks?

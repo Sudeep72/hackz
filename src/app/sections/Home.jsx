@@ -403,7 +403,7 @@ export default function Home() {
 
   return (
     <div className="relative overflow-hidden min-h-screen">
-      <BackgroundBeams className="z-10" />
+      {/* <BackgroundBeams className="z-10" /> */}
 
       <div className="mt-20 relative z-10 min-h-screen">
         <div className="flex flex-col md:flex-row items-center justify-center text-center mt-12 md:mt-24 px-4 md:px-12">

@@ -13,7 +13,7 @@ import { Gem } from 'lucide-react';
 export default function Tracks() {
   return (
     <div className="mt-8 relative">
-      <BackgroundBeams className="absolute inset-0 z-0" />
+      {/* <BackgroundBeams className="absolute inset-0 z-0" /> */}
       <div className="relative z-10 mb-20">
         <h2 className="text-4xl font-extrabold text-center text-transparent bg-clip-text bg-gradient-to-r from-purple-500 via-pink-500 to-red-500">
           Tracks

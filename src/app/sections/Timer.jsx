@@ -40,9 +40,9 @@ export function TimerComponent() {
 
   return (
     <div className="relative z-10">
-      <div className="absolute inset-0 z-20">
+      {/* <div className="absolute inset-0 z-20">
         <BackgroundBeams />
-      </div>
+      </div> */}
       <LampContainer>
         <motion.h1
           initial={{ opacity: 0.5, y: 100 }}
