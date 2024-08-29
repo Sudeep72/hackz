@@ -15,7 +15,7 @@ const Timer = dynamic(
 
 export default function Home() {
   return (
-    <div className="relative min-h-screen">
+    <div className="relative min-h-screen scroll-smooth">
       <div className="absolute inset-0 z-20">
         <SparklesCore
           id="tsparticlesfullpage"
