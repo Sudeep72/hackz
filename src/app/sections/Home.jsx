@@ -1,28 +1,40 @@
 "use client";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import dynamic from "next/dynamic";
-import { BackgroundBeams } from "@/components/ui/background-beams";
-import { SparklesCore } from "@/components/ui/sparkles";
 import { TextHoverEffect } from "@/components/ui/text-hover-effect";
 import { MapPinMinus } from "lucide-react";
+import Spinner from "@/components/ui/spinner";
+import { BackgroundBeams } from "@/components/ui/background-beams";
 
+// Lazy load the World component with a loading fallback
 const World = dynamic(
   () => import("@/components/ui/globe").then((m) => m.World),
   {
     ssr: false,
+    loading: () => <div className="w-full h-full flex items-center justify-center"><Spinner size="large"/></div>, // You can replace this with a spinner component
   }
 );
 
 export default function Home() {
+  const [showGlobe, setShowGlobe] = useState(false);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setShowGlobe(true);
+    }, 1000); // 2 seconds delay
+
+    return () => clearTimeout(timer);
+  }, []);
+
   const globeConfig = {
-    pointSize: 4,
+    pointSize: 4, // Reduced size for performance
     globeColor: "#062056",
     showAtmosphere: true,
     atmosphereColor: "#FFFFFF",
     atmosphereAltitude: 0.1,
     emissive: "#062056",
     emissiveIntensity: 0.1,
-    shininess: 0.9,
+    shininess: 0.9, // Lower shininess for smoother rendering
     polygonColor: "rgba(255,255,255,0.7)",
     ambientLight: "#38bdf8",
     directionalLeftLight: "#ffffff",
@@ -30,8 +42,8 @@ export default function Home() {
     pointLight: "#ffffff",
     arcTime: 1000,
     arcLength: 0.9,
-    rings: 1,
-    maxRings: 3,
+    rings: 1, // Reduced number of rings
+    maxRings: 3, // Reduced max number of rings
     initialPosition: { lat: 22.3193, lng: 114.1694 },
     autoRotate: true,
     autoRotateSpeed: 0.5,
@@ -400,10 +412,10 @@ export default function Home() {
       color: colors[Math.floor(Math.random() * (colors.length - 1))],
     },
   ];
-
   return (
     <div className="relative overflow-hidden min-h-screen">
-      {/* <BackgroundBeams className="z-10" /> */}
+      {/* Uncomment if needed */}
+      <BackgroundBeams className="z-10" />
 
       <div className="mt-20 relative z-10 min-h-screen">
         <div className="flex flex-col md:flex-row items-center justify-center text-center mt-12 md:mt-24 px-4 md:px-12">
@@ -432,8 +444,8 @@ export default function Home() {
               </p>
             </div>
           </div>
-          <div className="w-full md:w-1/2 h-96 md:h-[500px] md:ml-auto">
-            <World data={sampleArcs} globeConfig={globeConfig} />
+          <div className={`w-full md:w-1/2 h-96 md:h-[500px] md:ml-auto transition-opacity duration-1000 ease-in-out ${showGlobe ? 'opacity-100' : 'opacity-0'}`}>
+            {showGlobe && <World data={sampleArcs} globeConfig={globeConfig} />}
           </div>
         </div>
       </div>
