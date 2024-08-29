@@ -39,7 +39,7 @@ export function TimerComponent() {
   }, []);
 
   return (
-    <div className="relative z-10">
+    <div className="relative z-10 mx-4">
       {/* <div className="absolute inset-0 z-20">
         <BackgroundBeams />
       </div> */}
@@ -54,7 +54,7 @@ export function TimerComponent() {
           }}
           className="bg-gradient-to-br from-slate-300 to-slate-500 py-2 bg-clip-text text-center text-4xl font-medium tracking-wider text-transparent md:text-5xl"
         >
-          <p className="bg-gradient-to-r from-yellow-500 via-red-500 to-cyan-500 bg-clip-text text-transparent font-semibold uppercase tracking-tight text-6xl">
+          <p className="bg-gradient-to-r from-yellow-500 via-red-500 to-cyan-500 bg-clip-text text-transparent font-semibold uppercase tracking-tight text-5xl mx-6">
             Hackathon starts in <br /> <br />
           </p>
           <span className="font-medium">{timeRemaining.days} <span className="font-medium text-xl">Days</span></span> : 
