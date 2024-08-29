@@ -3,7 +3,7 @@ import Link from "next/link";
 import Nav from "@/components/header";
 import { BackgroundBeams } from "@/components/ui/background-beams";
 import { SparklesCore } from "@/components/ui/sparkles";
-import Tracks from "@/components/track";
+import Tracks from "@/components/test";
 
 export default function Home() {
   return (
