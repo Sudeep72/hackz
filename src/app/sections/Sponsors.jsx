@@ -11,7 +11,7 @@ const SponsorImages = ({ category, color, images }) => (
     <div className="flex flex-wrap justify-center gap-6">
       {images.map(({ src, link }, index) => (
         <Link key={index} href={link} target="_blank" className="block w-full max-w-xs">
-          <div className="bg-black rounded-lg shadow-lg hover:shadow-xl transition-shadow ease-in-out duration-300 p-2 flex items-center my-8 justify-center h-40 md:h-48 transform hover:scale-105">
+          <div className="bg-black rounded-xl shadow-lg hover:shadow-xl transition-shadow ease-in-out duration-300 p-2 flex items-center my-8 justify-center h-40 md:h-48 transform hover:scale-105">
             <div className="relative w-full h-full flex items-center justify-center">
               <Image
                 src={src}
