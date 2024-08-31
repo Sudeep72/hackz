@@ -1,4 +1,3 @@
-// app/page.tsx or src/pages/index.tsx
 "use client";
 
 import { SparklesCore } from "@/components/ui/sparkles";
@@ -8,7 +7,7 @@ import HomePage from "./sections/Home";
 import About from "./sections/About";
 import Tracks from "./sections/Tracks";
 import TimeLine from "./sections/TimeLine";
-import BackgroundBeams from "@/components/ui/background-beams";
+// import BackgroundBeams from "@/components/ui/background-beams";
 
 const Timer = dynamic(
   () => import("./sections/Timer").then((mod) => mod.TimerComponent),
@@ -31,7 +30,7 @@ export default function Home() {
         />
       </div>
       <Nav />
-      <div className="mt-24">
+      <div className="mt-16">
         <div className="relative z-30">
           <HomePage />
         </div>

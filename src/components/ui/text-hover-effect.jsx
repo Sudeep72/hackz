@@ -73,7 +73,7 @@ export const TextHoverEffect = ({ text, duration }) => {
         textAnchor="middle"
         dominantBaseline="middle"
         strokeWidth="0.3"
-        className="font-bold fill-transparent text-[7rem] dark:stroke-neutral-400"
+        className="font-bold fill-transparent text-[7rem] dark:stroke-neutral-300"
         initial={{ strokeDashoffset: 1000, strokeDasharray: 1000 }}
         animate={{ strokeDashoffset: 0 }}
         transition={{ duration: 4, ease: "easeInOut" }}
@@ -86,7 +86,7 @@ export const TextHoverEffect = ({ text, duration }) => {
         textAnchor="middle"
         dominantBaseline="middle"
         stroke="url(#textGradient)"
-        strokeWidth="0.3"
+        strokeWidth="0.5"
         mask="url(#textMask)"
         className="font-bold fill-transparent text-[7rem]"
       >

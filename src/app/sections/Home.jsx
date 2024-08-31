@@ -6,12 +6,11 @@ import { MapPinMinus } from "lucide-react";
 import Spinner from "@/components/ui/spinner";
 import { BackgroundBeams } from "@/components/ui/background-beams";
 
-// Lazy load the World component with a loading fallback
 const World = dynamic(
   () => import("@/components/ui/globe").then((m) => m.World),
   {
     ssr: false,
-    loading: () => <div className="w-full h-full flex items-center justify-center"><Spinner size="large"/></div>, // You can replace this with a spinner component
+    loading: () => <div className="w-full h-full flex items-center justify-center"><Spinner size="large"/></div>,
   }
 );
 
@@ -21,20 +20,20 @@ export default function Home() {
   useEffect(() => {
     const timer = setTimeout(() => {
       setShowGlobe(true);
-    }, 1000); // 2 seconds delay
+    }, 1000);
 
     return () => clearTimeout(timer);
   }, []);
 
   const globeConfig = {
-    pointSize: 4, // Reduced size for performance
+    pointSize: 4,
     globeColor: "#062056",
     showAtmosphere: true,
     atmosphereColor: "#FFFFFF",
     atmosphereAltitude: 0.1,
     emissive: "#062056",
     emissiveIntensity: 0.1,
-    shininess: 0.9, // Lower shininess for smoother rendering
+    shininess: 0.9,
     polygonColor: "rgba(255,255,255,0.7)",
     ambientLight: "#38bdf8",
     directionalLeftLight: "#ffffff",
@@ -42,8 +41,8 @@ export default function Home() {
     pointLight: "#ffffff",
     arcTime: 1000,
     arcLength: 0.9,
-    rings: 1, // Reduced number of rings
-    maxRings: 3, // Reduced max number of rings
+    rings: 1,
+    maxRings: 3,
     initialPosition: { lat: 22.3193, lng: 114.1694 },
     autoRotate: true,
     autoRotateSpeed: 0.5,
@@ -414,7 +413,6 @@ export default function Home() {
   ];
   return (
     <div className="relative overflow-hidden min-h-screen">
-      {/* Uncomment if needed */}
       <BackgroundBeams className="z-10" />
 
       <div className="mt-20 relative z-10 min-h-screen">

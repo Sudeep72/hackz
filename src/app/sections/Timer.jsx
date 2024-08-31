@@ -2,7 +2,6 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { LampContainer } from '@/components/ui/lamp';
-import { BackgroundBeams } from "@/components/ui/background-beams";
 
 const endDate = new Date('2024-10-10T00:00:00');
 
@@ -40,9 +39,6 @@ export function TimerComponent() {
 
   return (
     <div className="relative z-10 mx-2">
-      {/* <div className="absolute inset-0 z-20">
-        <BackgroundBeams />
-      </div> */}
       <LampContainer>
         <motion.h1
           initial={{ opacity: 0.5, y: 100 }}
