@@ -7,6 +7,8 @@ import HomePage from "./sections/Home";
 import About from "./sections/About";
 import Tracks from "./sections/Tracks";
 import TimeLine from "./sections/TimeLine";
+import Sponsors from "./sections/Sponsors";
+import Prize from "./sections/Prize";
 // import BackgroundBeams from "@/components/ui/background-beams";
 
 const Timer = dynamic(
@@ -16,7 +18,7 @@ const Timer = dynamic(
 
 export default function Home() {
   return (
-    <div className="relative min-h-screen scroll-smooth">
+    <div className="relative min-h-screen scroll-smooth cursor-default">
       {/* <BackgroundBeams className="absolute inset-0 z-0" /> */}
       <div className="absolute inset-0 z-20">
         <SparklesCore
@@ -41,6 +43,8 @@ export default function Home() {
       </div>
       <div className="relative z-30">
         <Tracks />
+        <Sponsors />
+        <Prize />
         <TimeLine />
       </div>
     </div>
