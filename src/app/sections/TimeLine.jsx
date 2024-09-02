@@ -28,7 +28,8 @@ export default function HackathonTimeline() {
           </AnimatedText>
           <AnimatedText delay={0.1}>
             <p className="text-sm text-gray-600 dark:text-gray-300">
-              Get ready to embark on an exciting journey! Registration for our hackathon begins today.
+              Get ready to embark on an exciting journey! Registration for our
+              hackathon begins today.
             </p>
           </AnimatedText>
         </div>
@@ -62,7 +63,8 @@ export default function HackathonTimeline() {
           </AnimatedText>
           <AnimatedText delay={0.1}>
             <p className="text-sm text-gray-600 dark:text-gray-300">
-              The online screening phase comes to an end. Good luck to all participants!
+              The online screening phase comes to an end. Good luck to all
+              participants!
             </p>
           </AnimatedText>
         </div>
@@ -96,7 +98,8 @@ export default function HackathonTimeline() {
           </AnimatedText>
           <AnimatedText delay={0.1}>
             <p className="text-sm text-gray-600 dark:text-gray-300">
-              Finalists, get ready! Problem statements for Round 2 will be announced.
+              Finalists, get ready! Problem statements for Round 2 will be
+              announced.
             </p>
           </AnimatedText>
         </div>
@@ -113,7 +116,8 @@ export default function HackathonTimeline() {
           </AnimatedText>
           <AnimatedText delay={0.1}>
             <p className="text-sm text-gray-600 dark:text-gray-300">
-              The main event starts now! 24 hours of intense coding and creativity.
+              The main event starts now! 24 hours of intense coding and
+              creativity.
             </p>
           </AnimatedText>
         </div>
@@ -130,7 +134,8 @@ export default function HackathonTimeline() {
           </AnimatedText>
           <AnimatedText delay={0.1}>
             <p className="text-sm text-gray-600 dark:text-gray-300">
-              Times up! The 24-hour hackathon comes to an end. Congratulations to all participants!
+              Times up! The 24-hour hackathon comes to an end. Congratulations
+              to all participants!
             </p>
           </AnimatedText>
         </div>
@@ -141,8 +146,8 @@ export default function HackathonTimeline() {
   return (
     <div className="w-full max-w-4xl mx-auto p-6 rounded-xl shadow-lg mt-28">
       <h2 className="text-4xl font-extrabold text-center text-transparent bg-clip-text bg-gradient-to-r from-purple-500 via-pink-500 to-red-500">
-  Timeline
-</h2>
+        Timeline
+      </h2>
       <Timeline data={data} />
     </div>
   );

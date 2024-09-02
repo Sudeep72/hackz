@@ -8,7 +8,7 @@ export default function JoinUs() {
           <div className="text-center mb-8">
             <p className="text-lg md:text-xl font-medium mb-2">
               Reach hundreds of students and potential customers by sponsoring{" "}
-              <span className="text-orange-500">K! Hacks</span>
+              <span className="text-orange-500">HackZ</span>
             </p>
             <h2 className="text-3xl md:text-4xl font-bold">Want to Join Us?</h2>
           </div>

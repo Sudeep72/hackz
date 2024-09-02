@@ -15,7 +15,17 @@ export default function About() {
         </p>
         <div className="text-neutral-200 mt-4 relative z-20 text-justify text-xl">
           <p>
-            HackZ’24, an initiative by <LinkPreview url="https://cseaceg.org.in/" className="font-bold">CSEA</LinkPreview> is a dynamic 24-hour hackathon that brings together the brightest minds to solve real-world challenges through technology and innovation. Open to engineering students, the hackathon encourages collaboration and out-of-the-box thinking, fostering an environment of learning and innovation. Participants will work in teams to solve industry-relevant problems, with the chance to create impactful solutions that can be scaled and implemented in the real world.
+            HackZ’24, an initiative by{" "}
+            <LinkPreview url="https://cseaceg.org.in/" className="font-bold">
+              CSEA
+            </LinkPreview>{" "}
+            is a dynamic 24-hour hackathon that brings together the brightest
+            minds to solve real-world challenges through technology and
+            innovation. Open to engineering students, the hackathon encourages
+            collaboration and out-of-the-box thinking, fostering an environment
+            of learning and innovation. Participants will work in teams to solve
+            industry-relevant problems, with the chance to create impactful
+            solutions that can be scaled and implemented in the real world.
           </p>
         </div>
       </CardSpotlight>

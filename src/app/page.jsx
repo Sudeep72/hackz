@@ -11,6 +11,7 @@ import Sponsors from "./sections/Sponsors";
 import Prize from "./sections/Prize";
 import JoinUs from "./sections/Join_Us";
 import Faq from "./sections/Faq";
+import Footer from "@/components/Footer";
 // import BackgroundBeams from "@/components/ui/background-beams";
 
 const Timer = dynamic(
@@ -50,6 +51,7 @@ export default function Home() {
         <TimeLine />
         <JoinUs />
         <Faq />
+        <Footer />
       </div>
     </div>
   );
