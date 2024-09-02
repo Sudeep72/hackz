@@ -10,6 +10,7 @@ import TimeLine from "./sections/TimeLine";
 import Sponsors from "./sections/Sponsors";
 import Prize from "./sections/Prize";
 import JoinUs from "./sections/Join_Us";
+
 // import BackgroundBeams from "@/components/ui/background-beams";
 
 const Timer = dynamic(
