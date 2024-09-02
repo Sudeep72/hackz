@@ -9,6 +9,7 @@ import Tracks from "./sections/Tracks";
 import TimeLine from "./sections/TimeLine";
 import Sponsors from "./sections/Sponsors";
 import Prize from "./sections/Prize";
+import JoinUs from "./sections/Join_Us";
 // import BackgroundBeams from "@/components/ui/background-beams";
 
 const Timer = dynamic(
@@ -46,6 +47,7 @@ export default function Home() {
         <Sponsors />
         <Prize />
         <TimeLine />
+        <JoinUs />
       </div>
     </div>
   );
