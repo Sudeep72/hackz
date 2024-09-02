@@ -19,6 +19,14 @@ export const sponsorsData = [
     ],
   },
   {
+    category: "Associate Sponsor",
+    color: "text-amber-900",
+    images: [
+      { src: AssociateSponsorImage1, link: "https://www.example.com/associate1" },
+      { src: AssociateSponsorImage2, link: "https://www.example.com/associate2" }
+    ],
+  },
+  {
     category: "Gold Sponsor",
     color: "text-yellow-500",
     images: [
@@ -32,14 +40,6 @@ export const sponsorsData = [
     images: [
       { src: SilverSponsorImage1, link: "https://www.example.com/silver1" },
       { src: SilverSponsorImage2, link: "https://www.example.com/silver2" }
-    ],
-  },
-  {
-    category: "Associate Sponsor",
-    color: "text-amber-900",
-    images: [
-      { src: AssociateSponsorImage1, link: "https://www.example.com/associate1" },
-      { src: AssociateSponsorImage2, link: "https://www.example.com/associate2" }
     ],
   },
   {
