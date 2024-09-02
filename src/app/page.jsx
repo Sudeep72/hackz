@@ -36,22 +36,36 @@ export default function Home() {
       </div>
       <Nav />
       <div className="mt-16">
-        <div className="relative z-30">
+        <div id="home" className="relative z-30">
           <HomePage />
         </div>
         <div className="relative z-10">
           <Timer />
         </div>
-        <About />
-      </div>
-      <div className="relative z-30">
-        <Tracks />
-        <Sponsors />
-        <Prize />
-        <TimeLine />
-        <JoinUs />
-        <Faq />
-        <Footer />
+        <div id="about">
+          <About />
+        </div>
+        <div id="tracks" className="relative z-30">
+          <Tracks />
+        </div>
+        <div id="sponsors" className="relative z-30">
+          <Sponsors />
+        </div>
+        <div id="prizes" className="relative z-30">
+          <Prize />
+        </div>
+        <div id="timeline" className="relative z-30">
+          <TimeLine />
+        </div>
+        <div id="joinus" className="relative z-30">
+          <JoinUs />
+        </div>
+        <div id="faqs" className="relative z-30">
+          <Faq />
+        </div>
+        <div id="contact" className="relative z-30">
+          <Footer />
+        </div>
       </div>
     </div>
   );

@@ -1,4 +1,3 @@
-import { Apple } from 'lucide-react';
 import Link from 'next/link';
 import Image from 'next/image';
 import Logo from '@/assets/logo.png';
@@ -13,25 +12,24 @@ export default function MainNav({ isScrolled }) {
       }`}
     >
       <Link href='/'>
-        {/* <Apple className="text-white transition-colors duration-300" /> */}
         <Image
-        src = {Logo}
-        alt='HackZ Logo'
-        width={120}
-         />
+          src={Logo}
+          alt='HackZ Logo'
+          width={120}
+        />
       </Link>
       <nav className='flex items-center gap-6 lg:gap-8'>
-        {['About', 'Sponsors', 'Prizes', 'Rules', 'Tracks', 'Timeline', 'FAQs', 'Contact'].map((item) => (
+        {['Home', 'About', 'Sponsors', 'Prizes','Tracks', 'Timeline', 'FAQs', 'Contact'].map((item) => (
           <Link
             key={item}
-            href={`/${item.toLowerCase()}`}
+            href={`/#${item.toLowerCase()}`}
             className="text-white hover:text-gray-300 transition-colors duration-300"
           >
             {item}
           </Link>
         ))}
         <Link
-          href='/join'
+          href='/#joinus'
           className="bg-orange-600 hover:bg-orange-700 text-white font-bold py-2 px-4 rounded transition-colors duration-300"
         >
           Join Us
