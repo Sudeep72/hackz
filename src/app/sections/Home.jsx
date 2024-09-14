@@ -10,7 +10,11 @@ const World = dynamic(
   () => import("@/components/ui/globe").then((m) => m.World),
   {
     ssr: false,
-    loading: () => <div className="w-full h-full flex items-center justify-center"><Spinner size="large"/></div>,
+    loading: () => (
+      <div className="w-full h-full flex items-center justify-center">
+        <Spinner size="large" />
+      </div>
+    ),
   }
 );
 
@@ -27,20 +31,20 @@ export default function Home() {
 
   const globeConfig = {
     pointSize: 4,
-    globeColor: "#062056",
+    globeColor: "#082f49",
     showAtmosphere: true,
-    atmosphereColor: "#FFFFFF",
+    atmosphereColor: "#0369a1",
     atmosphereAltitude: 0.1,
     emissive: "#062056",
     emissiveIntensity: 0.1,
     shininess: 0.9,
-    polygonColor: "rgba(255,255,255,0.7)",
-    ambientLight: "#38bdf8",
+    polygonColor: "#99f6e4",
+    ambientLight: "#000",
     directionalLeftLight: "#ffffff",
     directionalTopLight: "#ffffff",
     pointLight: "#ffffff",
     arcTime: 1000,
-    arcLength: 0.9,
+    arcLength: 0.7,
     rings: 1,
     maxRings: 3,
     initialPosition: { lat: 22.3193, lng: 114.1694 },
@@ -442,7 +446,11 @@ export default function Home() {
               </p>
             </div>
           </div>
-          <div className={`w-full md:w-1/2 h-96 md:h-[500px] md:ml-auto transition-opacity duration-1000 ease-in-out ${showGlobe ? 'opacity-100' : 'opacity-0'}`}>
+          <div
+            className={`w-full md:w-1/2 h-96 md:h-[500px] md:ml-auto transition-opacity duration-1000 ease-in-out ${
+              showGlobe ? "opacity-100" : "opacity-0"
+            }`}
+          >
             {showGlobe && <World data={sampleArcs} globeConfig={globeConfig} />}
           </div>
         </div>

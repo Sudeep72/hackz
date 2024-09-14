@@ -1,7 +1,7 @@
-import { useState } from 'react';
+import { useState } from "react";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { AlignRight } from "lucide-react";
-import Logo from '@/assets/logo.png';
+import Logo from "@/assets/logo.png";
 import Link from "next/link";
 import Image from "next/image";
 
@@ -11,13 +11,9 @@ export default function MobileNav() {
   const handleClose = () => setIsOpen(false);
 
   return (
-    <div className="md:hidden flex justify-between items-center w-full">
+    <div className="lg:hidden flex justify-between items-center w-full">
       <Link href="/">
-        <Image
-          src={Logo}
-          alt='HackZ Logo'
-          width={120}
-        />
+        <Image src={Logo} alt="HackZ Logo" width={120} />
       </Link>
       <Sheet open={isOpen} onOpenChange={setIsOpen}>
         <SheetTrigger
