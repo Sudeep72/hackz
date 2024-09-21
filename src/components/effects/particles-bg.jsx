@@ -25,7 +25,7 @@ const ParticlesBg = () => {
         initial={{ opacity: 0, scale: 0.5 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 1 }}
-        className="z-[-10] fixed h-2/3 w-1/3 top-3/4 left-1/5 bg-teal-500/15 blur-[150px] md:blur-[240px] min-[1800px]:blur-[400px] rounded-full"
+        className="z-[-10] fixed h-2/3 w-1/3 top-3/4 left-1/5 bg-teal-500/20 blur-[150px] md:blur-[240px] min-[1800px]:blur-[400px] rounded-full"
       ></motion.div>
       <Particles
         className="absolute inset-0"

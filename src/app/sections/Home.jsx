@@ -1,10 +1,14 @@
 "use client";
 import React, { useEffect, useState } from "react";
 import dynamic from "next/dynamic";
-import { TextHoverEffect } from "@/components/ui/text-hover-effect";
-import { MapPinMinus } from "lucide-react";
+import RotateText from "@/components/effects/rotate-text";
+import { LocateFixed } from "lucide-react";
 import Spinner from "@/components/ui/spinner";
-// import { BackgroundBeams } from "@/components/ui/background-beams";
+import AnimatedShinyText from "@/components/magicui/animated-shiny-text";
+import ShinyButton from "@/components/magicui/shiny-button";
+import Link from "next/link";
+import { motion } from "framer-motion";
+import { FADE_UP_ANIMATION_VARIANTS } from "@/lib/utils";
 
 const World = dynamic(
   () => import("@/components/ui/globe").then((m) => m.World),
@@ -416,38 +420,80 @@ export default function Home() {
     },
   ];
   return (
-    <div className="relative overflow-hidden min-h-screen">
-      {/* <BackgroundBeams className="z-10" /> */}
+    <div className="relative overflow-hidden">
+      <div className="lg:my-[12vh] relative z-10 mx-auto max-w-8xl">
+        <div className="flex flex-col lg:flex-row items-center justify-center text-center mt-12 md:mt-2009 px-4 md:px-12">
+          <motion.div
+            initial="hidden"
+            animate="show"
+            viewport={{ once: true }}
+            variants={{
+              hidden: {},
+              show: {
+                transition: {
+                  staggerChildren: 0.15,
+                },
+              },
+            }}
+            className="flex flex-col items-center text-center lg:items-start mb-6 mx-auto md:mb-0 gap-2"
+          >
+            <motion.div variants={FADE_UP_ANIMATION_VARIANTS}>
+              <Link href="https://cseaceg.org.in/" target="_blank">
+                <ShinyButton className="rounded-full mb-4 bg-cyan-950/10">
+                  <span className="text-xs sm:text-sm">
+                    ✨{" "}
+                    <span className="font-medium text-cyan-400 tracking-widest">
+                      CSEA
+                    </span>{" "}
+                    presents
+                  </span>
+                </ShinyButton>
+              </Link>
+            </motion.div>
 
-      <div className="mt-20 relative z-10 min-h-screen">
-        <div className="flex flex-col md:flex-row items-center justify-center text-center mt-12 md:mt-24 px-4 md:px-12">
-          <div className="flex flex-col items-center text-center md:items-start mb-6 mx-auto md:mb-0 z-10">
-            <h2 className="text-4xl md:text-4xl md:ml-16 font-bold mb-2 text-transparent bg-clip-text bg-gradient-to-r from-yellow-500 via-red-500 to-cyan-500 tracking-widest">
-              CSEA
-            </h2>
-
-            <h4 className="text-base md:text-base md:ml-16 font-semibold mb-2 text-cyan-800 uppercase">
-              Presents
-            </h4>
-            <h1 className="text-8xl md:text-7xl font-extrabold mb-4 text-transparent bg-clip-text tracking-widest">
-              <TextHoverEffect text="HackZ‘24" />
-            </h1>
-            <p className="text-base md:text-base md:ml-16 font-semibold uppercase mb-6">
-              24-Hour National Hackathon
-            </p>
-            <div className="bg-green-900 inline-block md:ml-16 px-4 py-2 rounded-full mb-6 relative text-gray-400 transition-all ease-in-out duration-300 hover:bg-green-600 hover:text-white">
-              <MapPinMinus
-                className="absolute left-2 top-1/2 transform -translate-y-1/2"
-                size={16}
-                strokeWidth={2.5}
+            <motion.h1
+              variants={FADE_UP_ANIMATION_VARIANTS}
+              className="font-extrabold mb-4 flex text-7xl sm:text-8xl lg:text-9xl lg:w-[32rem] tracking-widest text-teal-100/80"
+            >
+              <RotateText letters={["H", "𝓗", "𝙷", "ℍ", "𝐇"]} interval={3400} />
+              <RotateText
+                letters={["𝕒", "𝓪", "ä", "ă", "𝖆", "a", "𝖺"]}
+                interval={2300}
               />
-              <p className="text-xs ml-4 uppercase font-medium">
-                Anna University, Chennai
-              </p>
-            </div>
-          </div>
+              <RotateText letters={["𝓬", "𝙘", "ċ", "𝖈", "𝚌"]} interval={4200} />
+              <RotateText
+                letters={["𝗸", "𝔎", "𝓚", "K", "𝓴", "𝚔"]}
+                interval={5100}
+              />
+              <RotateText letters={["𝒛", "z", "𝓏", "ź", "𝘇"]} interval={6500} />
+            </motion.h1>
+            <motion.p
+              variants={FADE_UP_ANIMATION_VARIANTS}
+              className="text-base tracking-widest text-cyan-300/70"
+            >
+              24-Hour National Hackathon
+            </motion.p>
+
+            <motion.div variants={FADE_UP_ANIMATION_VARIANTS}>
+              <Link
+                href="https://maps.app.goo.gl/JL1mG5KUfTrLS6Pg6"
+                target="_blank"
+              >
+                <AnimatedShinyText className="mx-0 mt-4 inline-flex items-center justify-center px-4 py-2 transition ease-out hover:text-sky-600 hover:duration-300 hover:dark:text-sky-400 border border-sky-400/10 rounded-sm backdrop-blur-sm ">
+                  <LocateFixed
+                    className="absolute left-2 top-1/2 transform -translate-y-1/2"
+                    size={16}
+                    strokeWidth={2.5}
+                  />
+                  <span className="text-xs ml-4 font-medium tracking-widest">
+                    Anna University, Chennai
+                  </span>
+                </AnimatedShinyText>
+              </Link>
+            </motion.div>
+          </motion.div>
           <div
-            className={`w-full md:w-1/2 h-96 md:h-[500px] md:ml-auto transition-opacity duration-1000 ease-in-out ${
+            className={`w-full lg:w-1/2 h-96 lg:h-[500px] lg:ml-auto transition-opacity duration-1000 ease-in-out ${
               showGlobe ? "opacity-100" : "opacity-0"
             }`}
           >

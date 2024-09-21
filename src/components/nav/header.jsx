@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
 import MainNav from "./main-nav";
 import MobileNav from "./mobile-nav";
+import { motion } from "framer-motion";
+import { FADE_DOWN_ANIMATION_VARIANTS } from "@/lib/utils";
 
 export default function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -15,7 +17,12 @@ export default function Header() {
   }, []);
 
   return (
-    <div className="fixed top-0 w-full z-50">
+    <motion.div
+      initial="hidden"
+      animate="show"
+      variants={FADE_DOWN_ANIMATION_VARIANTS}
+      className={`fixed top-0 left-0 w-full z-50`}
+    >
       <div
         className={`mx-auto max-w-screen-xl transition-all pt-2 ${
           isScrolled ? "px-4" : ""
@@ -36,6 +43,6 @@ export default function Header() {
           </div>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 }
