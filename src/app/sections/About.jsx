@@ -1,34 +1,39 @@
-import React from "react";
-
-import { CardSpotlight } from "@/components/ui/card-spotlight";
-import { LinkPreview } from "@/components/ui/link-preview";
+import React, { useRef } from "react";
+import { motion, useInView } from "framer-motion";
 
 export default function About() {
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true });
   return (
-    <div className="flex flex-col justify-center items-center mx-4 mb-48">
-      <h2 className="text-4xl font-extrabold text-center text-transparent bg-clip-text bg-gradient-to-r from-purple-500 via-pink-500 to-red-500 mb-6">
-        About
-      </h2>
-      <CardSpotlight className="h-auto w-full max-w-4xl p-6 bg-transparent relative z-20 mt-12">
-        <p className="text-2xl font-bold relative z-20 mt-2 text-white text-center">
+    <motion.div
+      ref={ref}
+      initial="hidden"
+      animate={isInView ? "show" : "hidden"}
+      variants={{
+        hidden: { opacity: 0, y: 100 },
+        show: { opacity: 1, y: 0, transition: { duration: 0.5 } },
+      }}
+      className="flex flex-col justify-center items-center mx-4 mb-48 pt-20"
+    >
+      <div className="relative h-auto w-full rounded-2xl max-w-4xl p-6 sm:p-8 z-20 mt-12 border-dashed bg-sky-950/20 border-2 border-sky-950/40 backdrop-blur-sm">
+        <h3
+          className={
+            "text-2xl sm:text-4xl font-semibold mb-6 text-center bg-gradient-to-t bg-clip-text leading-none text-transparent from-sky-200 to-sky-800/90"
+          }
+        >
           What is HackZ’24?
+        </h3>
+        <p className="tracking-wider text-teal-100/80 sm:leading-8 text-justify sm:text-xl">
+          HackZ’24, an initiative by CSEA is a dynamic 24-hour hackathon that
+          brings together the brightest minds to solve real-world challenges
+          through technology and innovation. Open to engineering students, the
+          hackathon encourages collaboration and out-of-the-box thinking,
+          fostering an environment of learning and innovation. Participants will
+          work in teams to solve industry-relevant problems, with the chance to
+          create impactful solutions that can be scaled and implemented in the
+          real world.
         </p>
-        <div className="text-neutral-200 mt-4 relative z-20 text-justify text-xl">
-          <p>
-            HackZ’24, an initiative by{" "}
-            <LinkPreview url="https://cseaceg.org.in/" className="font-bold">
-              CSEA
-            </LinkPreview>{" "}
-            is a dynamic 24-hour hackathon that brings together the brightest
-            minds to solve real-world challenges through technology and
-            innovation. Open to engineering students, the hackathon encourages
-            collaboration and out-of-the-box thinking, fostering an environment
-            of learning and innovation. Participants will work in teams to solve
-            industry-relevant problems, with the chance to create impactful
-            solutions that can be scaled and implemented in the real world.
-          </p>
-        </div>
-      </CardSpotlight>
-    </div>
+      </div>
+    </motion.div>
   );
 }

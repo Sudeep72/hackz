@@ -1,18 +1,93 @@
 import React from "react";
 import { LinkPreview } from "@/components/ui/link-preview";
-import { Instagram, Facebook, Twitter, Linkedin, Heart } from "lucide-react";
+import {
+  Instagram,
+  Facebook,
+  Twitter,
+  Linkedin,
+  Heart,
+  Mail,
+} from "lucide-react";
+import AnimatedGridPattern from "@/components/magicui/animated-grid-pattern";
+import { cn } from "@/lib/utils";
 
 export default function Footer() {
   return (
-    <footer className="mt-12 bg-transparent py-8 border border-gray-300 border-t-1 rounded-t-xl backdrop-blur-md backdrop-brightness-150">
-      <div className="container mx-auto px-4 flex flex-col md:flex-row gap-8">
-        <div className="flex-1 flex flex-col border-b md:border-b-0 md:border-r border-gray-300 pb-8 md:pb-0 md:pr-8">
-          <h3 className="font-bold text-lg text-teal-400 mb-4">Quick Links</h3>
-          <div className="grid grid-cols-2 gap-6">
-            <ul className="space-y-2">
+    <footer className="py-6 px-4">
+      <div className="relative overflow-hidden max-w-7xl mx-auto border-2 border-dashed border-sky-950/40 rounded-3xl bg-gradient-to-b from-sky-950/20 to-teal-950/20 backdrop-blur-md">
+        <AnimatedGridPattern
+          numSquares={30}
+          maxOpacity={0.1}
+          duration={3}
+          repeatDelay={1}
+          className={cn(
+            "[mask-image:radial-gradient(1000px_circle_at_center,#042f2e,transparent)] opacity-20",
+            "inset-x-0 inset-y-[-30%] h-[200%] skew-y-12"
+          )}
+        />
+        <div className="px-6 py-4 md:px-10 md:py-8 flex flex-wrap gap-8 lg:gap-12">
+          <div className="mr-auto">
+            <LinkPreview
+              url="https://cseaceg.org.in/"
+              className="text-4xl font-bold tracking-widest bg-gradient-to-r bg-clip-text leading-none dark:text-transparent from-teal-500/80 from-70% to-sky-500/90"
+            >
+              CSEA
+            </LinkPreview>
+            <p className="text-sm text-foreground/60 mt-4 max-w-sm tracking-wider">
+              The Computer Science and Engineering Association of College of
+              Engineering, Guindy
+            </p>
+            <div className="flex gap-2 py-4">
+              <a
+                href="#"
+                className="p-2 rounded-full text-sky-400/70 hover:text-sky-800 transition-colors"
+              >
+                <Instagram size={24} />
+              </a>
+              <a
+                href="#"
+                className="p-2 rounded-full text-sky-400/70 hover:text-sky-800 transition-colors"
+              >
+                <Facebook size={24} />
+              </a>
+              <a
+                href="#"
+                className="p-2 rounded-full text-sky-400/70 hover:text-sky-800 transition-colors"
+              >
+                <Twitter size={24} />
+              </a>
+              <a
+                href="#"
+                className="p-2 rounded-full text-sky-400/70 hover:text-sky-800 transition-colors"
+              >
+                <Linkedin size={24} />
+              </a>
+            </div>
+            <div>
+              <a
+                href="mailto:mail@sudeepdev.co"
+                className="flex items-center tracking-wider text-teal-200/80 hover:underline"
+              >
+                <Mail className="h-4 w-4 mr-2 text-emerald-400" />
+                mail@sudeepdev.co
+              </a>
+              <a
+                href="mailto:mail@csea.org.in"
+                className="flex items-center tracking-wider text-teal-200/80 hover:underline"
+              >
+                <Mail className="h-4 w-4 mr-2 text-emerald-400" />
+                mail@csea.org.in
+              </a>
+            </div>
+          </div>
+          <div className="w-[40%] lg:max-w-48">
+            <h4 className=" font-bold text-xl bg-gradient-to-b bg-clip-text leading-none text-transparent from-teal-200 to-teal-800/90">
+              Quick Links
+            </h4>
+            <ul className="mt-4 text-sm tracking-wider text-foreground/80 grid grid-cols-2 sm:grid-cols-1 gap-x-4 gap-y-2">
               <li>
                 <a href="#" className="hover:underline">
-                  About
+                  About Us
                 </a>
               </li>
               <li>
@@ -22,24 +97,12 @@ export default function Footer() {
               </li>
               <li>
                 <a href="#" className="hover:underline">
-                  Prizes
+                  Prized
                 </a>
               </li>
-              <li>
-                <a href="#" className="hover:underline">
-                  Rules
-                </a>
-              </li>
-            </ul>
-            <ul className="space-y-2">
               <li>
                 <a href="#" className="hover:underline">
                   Tracks
-                </a>
-              </li>
-              <li>
-                <a href="#" className="hover:underline">
-                  Timeline
                 </a>
               </li>
               <li>
@@ -49,108 +112,54 @@ export default function Footer() {
               </li>
               <li>
                 <a href="#" className="hover:underline">
+                  Contact
+                </a>
+              </li>
+              <li>
+                <a href="#" className="hover:underline">
                   Join Us
                 </a>
               </li>
             </ul>
           </div>
-        </div>
-
-        <div className="flex-1 flex flex-col border-b md:border-b-0 md:border-r border-gray-300 pb-8 md:pb-0 md:pr-4">
-          <h3 className="font-bold text-lg text-teal-400 mb-4">Get in Touch</h3>
-          <ul className="space-y-4">
-            <li>
-              <a href="mailto:mail@sudeepdev.co" className="hover:underline">
-                mail@sudeepdev.co
-              </a>
-            </li>
-            <li>
-              <a href="mailto:mail@csea.org.in" className="hover:underline">
-                mail@csea.org.in
-              </a>
-            </li>
-          </ul>
-          <div className="mt-8 flex flex-wrap gap-4">
-            <a
-              href="#"
-              aria-label="Instagram"
-              className="hover:scale-110 transform transition"
-            >
-              <Instagram className="h-6 w-6 text-gray-600 hover:text-gray-800" />
-            </a>
-            <a
-              href="#"
-              aria-label="Facebook"
-              className="hover:scale-110 transform transition"
-            >
-              <Facebook className="h-6 w-6 text-gray-600 hover:text-gray-800" />
-            </a>
-            <a
-              href="#"
-              aria-label="Twitter"
-              className="hover:scale-110 transform transition"
-            >
-              <Twitter className="h-6 w-6 text-gray-600 hover:text-gray-800" />
-            </a>
-            <a
-              href="#"
-              aria-label="LinkedIn"
-              className="hover:scale-110 transform transition"
-            >
-              <Linkedin className="h-6 w-6 text-gray-600 hover:text-gray-800" />
-            </a>
-          </div>
-        </div>
-
-        <div className="flex-1 flex flex-col pt-8 md:pt-0">
-          <h3 className="font-bold text-lg text-teal-400 mb-4">Contact Us</h3>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-4">
-            <div className="flex flex-col mb-4">
-              <p className="hover:underline">Sudeep</p>
-              <p>
-                <a href="tel:+916380656451" className="hover:underline">
+          <div className="w-[40%] lg:max-w-48">
+            <h4 className=" font-bold text-xl bg-gradient-to-b bg-clip-text leading-none text-transparent from-teal-200 to-teal-800/90">
+              Contact Us
+            </h4>
+            <ul className="mt-4 text-sm tracking-wider text-foreground/80 grid grid-cols-2 sm:grid-cols-1 gap-x-4 gap-y-2">
+              <li className="flex flex-col space-y-1">
+                <span className="text-base text-sky-300">Sudeep</span>
+                <a href="tel:+91 63806 56451" className="hover:underline">
                   +91 63806 56451
                 </a>
-              </p>
-            </div>
-            <div className="flex flex-col mb-4">
-              <p className="hover:underline">John Doe</p>
-              <p>
-                <a href="tel:+916969696969" className="hover:underline">
-                  +91 69696 96969
+              </li>
+              <li className="flex flex-col space-y-1">
+                <span className="text-base text-sky-300">Sudeep</span>
+                <a href="tel:+91 63806 56451" className="hover:underline">
+                  +91 63806 56451
                 </a>
-              </p>
-            </div>
-            <div className="flex flex-col mb-4">
-              <p className="hover:underline">Tomato</p>
-              <p>
-                <a href="tel:+91123567890" className="hover:underline">
-                  +91 1235 67890
+              </li>
+              <li className="flex flex-col space-y-1">
+                <span className="text-base text-sky-300">Sudeep</span>
+                <a href="tel:+91 63806 56451" className="hover:underline">
+                  +91 63806 56451
                 </a>
-              </p>
-            </div>
-            <div className="flex flex-col mb-4">
-              <p className="hover:underline">Potato</p>
-              <p>
-                <a href="tel:+919876543210" className="hover:underline">
-                  +91 98765 43210
+              </li>
+              <li className="flex flex-col space-y-1">
+                <span className="text-base text-sky-300">Sudeep</span>
+                <a href="tel:+91 63806 56451" className="hover:underline">
+                  +91 63806 56451
                 </a>
-              </p>
-            </div>
+              </li>
+            </ul>
           </div>
         </div>
-      </div>
-
-      <div className="border-t border-gray-600 mt-8 pt-10 text-center text-gray-400">
-        <p className="font-normal">
-          &copy; {new Date().getFullYear()} CSEA. All rights reserved.
-        </p>
-        <p className="font-normal flex justify-center items-center mt-2">
-        Designed and developed with <Heart className="h-5 w-5 text-red-500 mx-2" /> by
-          <LinkPreview url="https://sudeepdev.co/" className="font-bold mx-2">
-            {" "}Sudeep
-          </LinkPreview>
-        </p>
+        <hr className="max-w-7xl mx-auto border-dashed bg-transparent border-sky-950/40" />
+        <div className="p-4 grid place-content-center border-t-2 border-dashed border-sky-950/40 ">
+          <span className="text-center tracking-widest text-sm text-teal-500">
+            © 2024 CSEA. All rights reserved.
+          </span>
+        </div>
       </div>
     </footer>
   );

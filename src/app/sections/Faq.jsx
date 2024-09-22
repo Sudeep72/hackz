@@ -1,57 +1,71 @@
 "use client";
 
 import React, { useState } from "react";
-import { ChevronDown, ChevronUp } from "lucide-react";
+import { TransitionPanel } from "@/components/effects/transition-panel";
+
 import faqData from "@/data/faqData";
 
 export default function Faq() {
-  const [openIndex, setOpenIndex] = useState(null);
+  const [activeIndex, setActiveIndex] = useState(0);
 
-  const toggleOpen = (index) => {
-    setOpenIndex(openIndex === index ? null : index);
-  };
+  const ITEMS = faqData;
 
   return (
-    <div className="flex justify-center items-center bg-transparent p-4 my-20">
-      <div className="max-w-5xl w-full bg-transparent">
-        <h2 className="text-4xl font-extrabold text-center text-transparent bg-clip-text bg-gradient-to-r from-purple-500 via-pink-500 to-red-500 mb-8">
-          FAQs
-        </h2>
-        <div className="space-y-6">
-          {faqData.map(({ id, question, answer }) => (
+    <div className="max-w-6xl mx-auto py-20 relative px-4">
+      <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold bg-gradient-to-t bg-clip-text leading-none text-transparent from-teal-200 to-teal-800/90 mb-12">
+        FAQs
+      </h2>
+      <div className="mb-4 flex space-x-2">
+        {ITEMS.map((item, index) => (
+          <button
+            key={index}
+            onClick={() => setActiveIndex(index)}
+            className={`cursor-pointer rounded-md px-3 py-1 text-sm font-medium ${
+              activeIndex === index
+                ? "bg-sky-950/30 text-sky-400"
+                : "bg-sky-950/20 text-teal-100"
+            }`}
+          >
+            {item.title}
+          </button>
+        ))}
+      </div>
+      <div className="overflow-hidden">
+        <TransitionPanel
+          activeIndex={activeIndex}
+          transition={{ duration: 0.2, ease: "easeInOut" }}
+          variants={{
+            enter: { opacity: 0, y: -50, filter: "blur(4px)" },
+            center: { opacity: 1, y: 0, filter: "blur(0px)" },
+            exit: { opacity: 0, y: 50, filter: "blur(4px)" },
+          }}
+          className={"backdrop-blur-sm"}
+        >
+          {ITEMS.map((item, index) => (
             <div
-              key={id}
-              className="border border-gray-600 rounded-xl overflow-hidden transition-all duration-300"
+              key={index}
+              className="py-2 rounded-3xl bg-teal-950/20 border-2 border-dashed border-teal-950/40"
             >
-              <div
-                className="p-4 flex justify-between items-center cursor-pointer bg-transparent"
-                onClick={() => toggleOpen(id)}
-              >
-                <h3 className="text-xl font-semibold text-gray-100">
-                  {question}
-                </h3>
+              {item.faqs.map((faq, index) => (
                 <div
-                  className={`transition-transform duration-300 ${
-                    openIndex === id ? "rotate-180" : "rotate-0"
+                  key={index}
+                  className={`px-6 py-4 ${
+                    index === item.faqs.length - 1
+                      ? ""
+                      : "border-b-2 border-dashed border-teal-950/40"
                   }`}
                 >
-                  {openIndex === id ? (
-                    <ChevronUp className="text-gray-100" />
-                  ) : (
-                    <ChevronDown className="text-gray-100" />
-                  )}
+                  <h3 className="font-semibold bg-gradient-to-t bg-clip-text leading-none text-transparent from-sky-200 to-sky-800/90 text-lg sm:text-xl">
+                    {faq.title}
+                  </h3>
+                  <p className="text-zinc-500 dark:text-zinc-300">
+                    {faq.content}
+                  </p>
                 </div>
-              </div>
-              <div
-                className={`transition-max-height duration-300 ease-in-out ${
-                  openIndex === id ? "max-h-96" : "max-h-0"
-                } overflow-hidden`}
-              >
-                <p className="p-4 text-base text-gray-400">{answer}</p>
-              </div>
+              ))}
             </div>
           ))}
-        </div>
+        </TransitionPanel>
       </div>
     </div>
   );
