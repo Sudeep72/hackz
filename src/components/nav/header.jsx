@@ -31,7 +31,7 @@ export default function Header() {
         <div
           className={`transition-all rounded-full  duration-300 ${
             isScrolled
-              ? "backdrop-blur-3xl bg-teal-900/20 border-2 border-teal-950/40"
+              ? "backdrop-blur-3xl bg-sky-900/20 border-2 border-dashed border-sky-950/40"
               : "border-2 border-transparent"
           }`}
         >

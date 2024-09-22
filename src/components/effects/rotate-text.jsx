@@ -24,9 +24,11 @@ export default function RotateText({
         animate={{ opacity: 1, y: 0 }}
         exit={{ opacity: 0, y: 50 }}
         transition={{ duration }}
-        className=" font-mono lg:w-36 border-2 text-center border-dashed border-teal-200/[.12] px-.5 backdrop-blur-sm bg-stone-950/40"
+        className=" font-mono lg:w-36 border-2 border-dashed border-teal-200/[.12] px-.5 backdrop-blur-sm bg-stone-950/40"
       >
-        {letters[index]}
+        <span className="text-center bg-gradient-to-t bg-clip-text leading-none text-transparent from-teal-200 to-teal-800/90">
+          {letters[index]}
+        </span>
       </motion.span>
     </AnimatePresence>
   );

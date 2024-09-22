@@ -466,7 +466,7 @@ export default function Home() {
                 letters={["𝗸", "𝔎", "𝓚", "K", "𝓴", "𝚔"]}
                 interval={5100}
               />
-              <RotateText letters={["𝒛", "z", "𝓏", "ź", "𝘇"]} interval={6500} />
+              <RotateText letters={["𝐙", "𝗭", "𝓩", "Ź", "ℤ"]} interval={6500} />
             </motion.h1>
             <motion.div
               variants={FADE_UP_ANIMATION_VARIANTS}
@@ -480,7 +480,7 @@ export default function Home() {
                 href="https://maps.app.goo.gl/JL1mG5KUfTrLS6Pg6"
                 target="_blank"
               >
-                <AnimatedShinyText className="mx-0 mt-4 inline-flex items-center justify-center px-4 py-2 transition ease-out hover:text-sky-600 hover:duration-300 hover:dark:text-sky-400 border border-sky-400/10 rounded-sm backdrop-blur-sm ">
+                <AnimatedShinyText className="mx-0 mt-4 inline-flex items-center justify-center px-4 py-2 transition ease-out hover:text-emerald-600 hover:duration-300 hover:dark:text-emerald-400 border border-sky-400/10 rounded-[8px] backdrop-blur-sm ">
                   <LocateFixed
                     className="absolute left-2 top-1/2 transform -translate-y-1/2"
                     size={16}

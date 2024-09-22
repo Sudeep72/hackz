@@ -1,6 +1,6 @@
 "use client";
-import React, { useState, useEffect } from "react";
-import { motion } from "framer-motion";
+import React, { useState, useEffect, useRef } from "react";
+import { useInView } from "framer-motion";
 import GridPattern from "@/components/magicui/grid-pattern";
 import { cn } from "@/lib/utils";
 
@@ -36,6 +36,8 @@ const calculateTimeRemaining = (endDate) => {
 };
 
 export function TimerComponent() {
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: false });
   const [timeRemaining, setTimeRemaining] = useState(
     calculateTimeRemaining(endDate)
   );
@@ -70,8 +72,17 @@ export function TimerComponent() {
           "hidden sm:block [mask-image:radial-gradient(600px_circle_at_center,white,transparent)]"
         )}
       />
-      <motion.div className="h-24 sm:h-44 max-w-3xl mx-auto grid place-content-center rounded-lg">
-        <div className="flex anta-regular text-center text-teal-100/80 text-2xl font-bold tracking-widest sm:text-5xl md:text-7xl gap-2">
+      <div
+        className={`h-24 sm:h-44 max-w-3xl mx-auto grid place-content-center rounded-lg`}
+      >
+        <div
+          ref={ref}
+          className={`flex anta-regular text-center bg-gradient-to-t from-teal-300 to-teal-300/80 bg-clip-text leading-none text-transparent dark:from-teal-200 dark:to-teal-600/60 text-2xl font-bold tracking-widest sm:text-5xl md:text-7xl gap-2
+          ${
+            isInView ? "opacity-1 blur-0" : "opacity-0 blur-md"
+          } transition-all duration-500 ease-in-out
+            `}
+        >
           <div className="flex flex-col">
             <span>{timeRemaining.days}</span>
             <span className="font-medium text-xs sm:text-sm lg:text-xl">
@@ -100,7 +111,7 @@ export function TimerComponent() {
             </span>
           </div>
         </div>
-      </motion.div>
+      </div>
     </div>
   );
 }
