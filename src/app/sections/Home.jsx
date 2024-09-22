@@ -494,7 +494,7 @@ export default function Home() {
             </motion.div>
           </motion.div>
           <div
-            className={`w-full lg:w-1/2 h-96 lg:h-[520px] lg:ml-auto transition-opacity duration-1000 ease-in-out ${
+            className={`w-full max-w-sm lg:w-1/2 h-96 lg:h-[520px] lg:max-w-none lg:ml-auto transition-opacity duration-1000 ease-in-out ${
               showGlobe ? "opacity-100" : "opacity-0"
             }`}
           >
