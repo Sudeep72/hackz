@@ -5,6 +5,7 @@ import RotateText from "@/components/effects/rotate-text";
 import { LocateFixed } from "lucide-react";
 import Spinner from "@/components/ui/spinner";
 import AnimatedShinyText from "@/components/magicui/animated-shiny-text";
+import HyperText from "@/components/magicui/hyper-text";
 import ShinyButton from "@/components/magicui/shiny-button";
 import Link from "next/link";
 import { motion } from "framer-motion";
@@ -82,7 +83,7 @@ export default function Home() {
       startLng: -43.951191,
       endLat: -1.303396,
       endLng: 36.852443,
-      arcAlt: 0.5,
+      arcAlt: 0.3,
       color: colors[Math.floor(Math.random() * (colors.length - 1))],
     },
     {
@@ -145,7 +146,7 @@ export default function Home() {
       startLng: 8.571831,
       endLat: -15.595412,
       endLng: -56.05918,
-      arcAlt: 0.5,
+      arcAlt: 0.2,
       color: colors[Math.floor(Math.random() * (colors.length - 1))],
     },
     {
@@ -154,7 +155,7 @@ export default function Home() {
       startLng: -58.3816,
       endLat: 22.3193,
       endLng: 114.1694,
-      arcAlt: 0.7,
+      arcAlt: 0.4,
       color: colors[Math.floor(Math.random() * (colors.length - 1))],
     },
     {
@@ -199,7 +200,7 @@ export default function Home() {
       startLng: 28.315853,
       endLat: 1.094136,
       endLng: -63.34546,
-      arcAlt: 0.7,
+      arcAlt: 0.45,
       color: colors[Math.floor(Math.random() * (colors.length - 1))],
     },
     {
@@ -289,7 +290,7 @@ export default function Home() {
       startLng: 114.1694,
       endLat: -22.9068,
       endLng: -43.1729,
-      arcAlt: 0.7,
+      arcAlt: 0.3,
       color: colors[Math.floor(Math.random() * (colors.length - 1))],
     },
     {
@@ -307,7 +308,7 @@ export default function Home() {
       startLng: -43.1729,
       endLat: 28.6139,
       endLng: 77.209,
-      arcAlt: 0.7,
+      arcAlt: 0.4,
       color: colors[Math.floor(Math.random() * (colors.length - 1))],
     },
     {
@@ -467,12 +468,12 @@ export default function Home() {
               />
               <RotateText letters={["𝒛", "z", "𝓏", "ź", "𝘇"]} interval={6500} />
             </motion.h1>
-            <motion.p
+            <motion.div
               variants={FADE_UP_ANIMATION_VARIANTS}
-              className="text-base tracking-widest text-cyan-300/70"
+              className="text-base tracking-widest normal-case text-cyan-300/70 mx-0"
             >
-              24-Hour National Hackathon
-            </motion.p>
+              <HyperText text="24-Hour National Hackathon" />
+            </motion.div>
 
             <motion.div variants={FADE_UP_ANIMATION_VARIANTS}>
               <Link
@@ -493,7 +494,7 @@ export default function Home() {
             </motion.div>
           </motion.div>
           <div
-            className={`w-full lg:w-1/2 h-96 lg:h-[500px] lg:ml-auto transition-opacity duration-1000 ease-in-out ${
+            className={`w-full lg:w-1/2 h-96 lg:h-[520px] lg:ml-auto transition-opacity duration-1000 ease-in-out ${
               showGlobe ? "opacity-100" : "opacity-0"
             }`}
           >

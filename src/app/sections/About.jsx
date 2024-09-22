@@ -5,7 +5,7 @@ import { LinkPreview } from "@/components/ui/link-preview";
 
 export default function About() {
   return (
-    <div className="flex flex-col justify-center items-center mx-4 mb-48">
+    <div className="flex flex-col justify-center items-center mx-4 mb-48 pt-20">
       <h2 className="text-4xl font-extrabold text-center text-transparent bg-clip-text bg-gradient-to-r from-purple-500 via-pink-500 to-red-500 mb-6">
         About
       </h2>

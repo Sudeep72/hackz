@@ -12,6 +12,7 @@ import JoinUs from "./sections/Join_Us";
 import Faq from "./sections/Faq";
 import Footer from "@/components/Footer";
 import ParticlesBg from "@/components/effects/particles-bg";
+import { ShootingStars } from "@/components/ui/shooting-stars";
 
 const Timer = dynamic(
   () => import("./sections/Timer").then((mod) => mod.TimerComponent),
@@ -20,41 +21,42 @@ const Timer = dynamic(
 
 export default function Home() {
   return (
-    <div className="relative min-h-screen scroll-smooth cursor-default">
-      <ParticlesBg />
+    <>
       <Nav />
-      <div className="mt-16">
-        <div id="home" className="relative z-30">
-          <HomePage />
-        </div>
-        <div className="relative z-10">
+      <div className="relative min-h-screen scroll-smooth cursor-default">
+        <ParticlesBg />
+        <ShootingStars trailColor="#0f766e" starColor="#ccfbf1" />
+        <div className="mt-16">
+          <div id="home">
+            <HomePage />
+          </div>
           <Timer />
-        </div>
-        <div id="about">
-          <About />
-        </div>
-        <div id="tracks" className="relative z-30">
-          <Tracks />
-        </div>
-        <div id="sponsors" className="relative z-30">
-          <Sponsors />
-        </div>
-        <div id="prizes" className="relative z-30">
-          <Prize />
-        </div>
-        <div id="timeline" className="relative z-30">
-          <TimeLine />
-        </div>
-        <div id="joinus" className="relative z-30">
-          <JoinUs />
-        </div>
-        <div id="faqs" className="relative z-30">
-          <Faq />
-        </div>
-        <div id="contact" className="relative z-30">
-          <Footer />
+          <div id="about">
+            <About />
+          </div>
+          <div id="tracks">
+            <Tracks />
+          </div>
+          <div id="sponsors">
+            <Sponsors />
+          </div>
+          <div id="prizes">
+            <Prize />
+          </div>
+          <div id="timeline">
+            <TimeLine />
+          </div>
+          <div id="joinus">
+            <JoinUs />
+          </div>
+          <div id="faqs">
+            <Faq />
+          </div>
+          <div id="contact">
+            <Footer />
+          </div>
         </div>
       </div>
-    </div>
+    </>
   );
 }
