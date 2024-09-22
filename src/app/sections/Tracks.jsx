@@ -7,13 +7,13 @@ import { AnimatePresence, motion } from "framer-motion";
 import { CanvasRevealEffect } from "@/components/ui/canvas-reveal-effect";
 import Image from "next/image";
 import WomenEmpowerment from "@/assets/tracks/womenempowerment.png";
-import { Gem } from 'lucide-react';
+import { Gem } from "lucide-react";
 
 export default function Tracks() {
   return (
     <div className="mt-8 relative">
       <div className="relative z-10 mb-20">
-        <h2 className="text-4xl font-extrabold text-center text-transparent bg-clip-text bg-gradient-to-r from-purple-500 via-pink-500 to-red-500">
+        <h2 className="text-3xl text-center sm:text-4xl md:text-5xl font-bold bg-gradient-to-t bg-clip-text leading-none text-transparent from-teal-200 to-teal-800/90 mb-12">
           Tracks
         </h2>
       </div>

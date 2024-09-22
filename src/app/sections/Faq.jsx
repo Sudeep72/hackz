@@ -6,7 +6,7 @@ import { TransitionPanel } from "@/components/effects/transition-panel";
 import faqData from "@/data/faqData";
 
 export default function Faq() {
-  const [activeIndex, setActiveIndex] = useState(2);
+  const [activeIndex, setActiveIndex] = useState(0);
 
   const ITEMS = faqData;
 
@@ -55,7 +55,7 @@ export default function Faq() {
                       : "border-b-2 border-dashed border-teal-950/40"
                   }`}
                 >
-                  <h3 className="font-semibold bg-gradient-to-t bg-clip-text leading-none text-transparent from-sky-200 to-sky-800/90 text-lg sm:text-xl md:text-2xl">
+                  <h3 className="font-semibold bg-gradient-to-t bg-clip-text leading-none text-transparent from-sky-200 to-sky-800/90 text-lg sm:text-xl">
                     {faq.title}
                   </h3>
                   <p className="text-zinc-500 dark:text-zinc-300">

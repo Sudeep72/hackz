@@ -22,12 +22,12 @@ export default function HackathonTimeline() {
       content: (
         <div className="space-y-2 mb-9">
           <AnimatedText>
-            <h3 className="text-lg font-semibold text-emerald-600 dark:text-emerald-400">
+            <h3 className="text-xl font-semibold text-teal-400">
               Registration Opens
             </h3>
           </AnimatedText>
           <AnimatedText delay={0.1}>
-            <p className="text-sm text-gray-600 dark:text-gray-300">
+            <p className="text-base text-teal-100/80 tracking-wide">
               Get ready to embark on an exciting journey! Registration for our
               hackathon begins today.
             </p>
@@ -40,12 +40,12 @@ export default function HackathonTimeline() {
       content: (
         <div className="space-y-2 mb-9">
           <AnimatedText>
-            <h3 className="text-lg font-semibold text-red-600 dark:text-red-400">
+            <h3 className="text-xl font-semibold text-rose-400">
               Registration Closes & Round 1 Begins
             </h3>
           </AnimatedText>
           <AnimatedText delay={0.1}>
-            <p className="text-sm text-gray-600 dark:text-gray-300">
+            <p className="text-base text-teal-100/80 tracking-wide">
               Last day to register! Online screening (Round 1) kicks off today.
             </p>
           </AnimatedText>
@@ -57,12 +57,12 @@ export default function HackathonTimeline() {
       content: (
         <div className="space-y-2 mb-9">
           <AnimatedText>
-            <h3 className="text-lg font-semibold text-purple-600 dark:text-purple-400">
+            <h3 className="text-xl font-semibold text-sky-400">
               Round 1 Concludes
             </h3>
           </AnimatedText>
           <AnimatedText delay={0.1}>
-            <p className="text-sm text-gray-600 dark:text-gray-300">
+            <p className="text-base text-teal-100/80 tracking-wide">
               The online screening phase comes to an end. Good luck to all
               participants!
             </p>
@@ -75,12 +75,12 @@ export default function HackathonTimeline() {
       content: (
         <div className="space-y-2 mb-9">
           <AnimatedText>
-            <h3 className="text-lg font-semibold text-blue-600 dark:text-blue-400">
+            <h3 className="text-xl font-semibold text-teal-400">
               Finalists Announced
             </h3>
           </AnimatedText>
           <AnimatedText delay={0.1}>
-            <p className="text-sm text-gray-600 dark:text-gray-300">
+            <p className="text-base text-teal-100/80 tracking-wide">
               The moment of truth! Finalists for Round 2 will be revealed today.
             </p>
           </AnimatedText>
@@ -92,12 +92,12 @@ export default function HackathonTimeline() {
       content: (
         <div className="space-y-2 mb-9">
           <AnimatedText>
-            <h3 className="text-lg font-semibold text-yellow-600 dark:text-yellow-400">
+            <h3 className="text-xl font-semibold text-cyan-600">
               Problem Statements Released
             </h3>
           </AnimatedText>
           <AnimatedText delay={0.1}>
-            <p className="text-sm text-gray-600 dark:text-gray-300">
+            <p className="text-base text-teal-100/80 tracking-wide">
               Finalists, get ready! Problem statements for Round 2 will be
               announced.
             </p>
@@ -110,12 +110,12 @@ export default function HackathonTimeline() {
       content: (
         <div className="space-y-2 mb-9">
           <AnimatedText>
-            <h3 className="text-lg font-semibold text-green-600 dark:text-green-400">
+            <h3 className="text-xl font-semibold text-emerald-400">
               24-Hour Hackathon Begins
             </h3>
           </AnimatedText>
           <AnimatedText delay={0.1}>
-            <p className="text-sm text-gray-600 dark:text-gray-300">
+            <p className="text-base text-teal-100/80 tracking-wide">
               The main event starts now! 24 hours of intense coding and
               creativity.
             </p>
@@ -128,12 +128,12 @@ export default function HackathonTimeline() {
       content: (
         <div className="space-y-2 mb-9">
           <AnimatedText>
-            <h3 className="text-lg font-semibold text-indigo-600 dark:text-indigo-400">
+            <h3 className="text-xl font-semibold text-rose-400">
               Hackathon Concludes
             </h3>
           </AnimatedText>
           <AnimatedText delay={0.1}>
-            <p className="text-sm text-gray-600 dark:text-gray-300">
+            <p className="text-base text-teal-100/80 tracking-wide">
               Times up! The 24-hour hackathon comes to an end. Congratulations
               to all participants!
             </p>
@@ -144,8 +144,8 @@ export default function HackathonTimeline() {
   ];
 
   return (
-    <div className="w-full max-w-4xl mx-auto p-6 rounded-xl shadow-lg mt-28">
-      <h2 className="text-4xl font-extrabold text-center text-transparent bg-clip-text bg-gradient-to-r from-purple-500 via-pink-500 to-red-500">
+    <div className="w-full max-w-4xl mx-auto p-6 rounded-xl shadow-lg pt-28">
+      <h2 className="text-3xl text-center sm:text-4xl md:text-5xl font-bold bg-gradient-to-t bg-clip-text leading-none text-transparent from-teal-200 to-teal-800/90">
         Timeline
       </h2>
       <Timeline data={data} />
