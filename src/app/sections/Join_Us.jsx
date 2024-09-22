@@ -1,18 +1,20 @@
 import React from "react";
+import Ripple from "@/components/magicui/ripple";
 
 export default function JoinUs() {
   return (
     <div className="pt-20">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 bg-transparent p-8 rounded-3xl">
-        <div className="p-8 rounded-3xl bg-transparent border-2 border-dashed border-sky-950/40 bg-gradient-to-b from-cyan-950/20 to-teal-950/20 backdrop-blur-md">
+        <div className="relative overflow-hidden p-8 rounded-3xl bg-transparent border-2 border-dashed border-sky-950/40 bg-gradient-to-b from-cyan-950/20 to-teal-950/20 backdrop-blur-md">
+          <Ripple className="opacity-50" />
           <div className="text-center mb-12">
-            <p className="text-lg md:text-xl font-medium mb-2 tracking-wide text-foreground/60">
+            <h2 className="mb-4 text-3xl sm:text-4xl md:text-5xl font-bold text-center bg-gradient-to-t bg-clip-text leading-none text-transparent from-teal-300 to-teal-800/90">
+              Want to Join Us?
+            </h2>
+            <p className="text-lg md:text-xl font-medium tracking-wide text-foreground/60">
               Reach hundreds of students and potential customers by sponsoring{" "}
               <span className="text-teal-500">HackZ</span>
             </p>
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-center bg-gradient-to-t bg-clip-text leading-none text-transparent from-teal-200 to-teal-800/90">
-              Want to Join Us?
-            </h2>
           </div>
           <div className="flex flex-col md:flex-row justify-center space-y-4 md:space-y-0 md:space-x-4">
             {/* Brochure Button */}

@@ -8,11 +8,23 @@ import {
   Heart,
   Mail,
 } from "lucide-react";
+import AnimatedGridPattern from "@/components/magicui/animated-grid-pattern";
+import { cn } from "@/lib/utils";
 
 export default function Footer() {
   return (
     <footer className="py-6 px-4">
-      <div className="max-w-7xl mx-auto border-2 border-dashed border-sky-950/40 rounded-3xl bg-gradient-to-b from-sky-950/20 to-teal-950/20 backdrop-blur-md">
+      <div className="relative overflow-hidden max-w-7xl mx-auto border-2 border-dashed border-sky-950/40 rounded-3xl bg-gradient-to-b from-sky-950/20 to-teal-950/20 backdrop-blur-md">
+        <AnimatedGridPattern
+          numSquares={30}
+          maxOpacity={0.1}
+          duration={3}
+          repeatDelay={1}
+          className={cn(
+            "[mask-image:radial-gradient(1000px_circle_at_center,#042f2e,transparent)] opacity-20",
+            "inset-x-0 inset-y-[-30%] h-[200%] skew-y-12"
+          )}
+        />
         <div className="px-6 py-4 md:px-10 md:py-8 flex flex-wrap gap-8 lg:gap-12">
           <div className="mr-auto">
             <LinkPreview
