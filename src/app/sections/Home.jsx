@@ -472,7 +472,7 @@ export default function Home() {
               variants={FADE_UP_ANIMATION_VARIANTS}
               className="text-base tracking-widest normal-case text-cyan-300/70 mx-0"
             >
-              <HyperText text="24-Hour National Hackathon" />
+              24-Hour National Hackathon
             </motion.div>
 
             <motion.div variants={FADE_UP_ANIMATION_VARIANTS}>

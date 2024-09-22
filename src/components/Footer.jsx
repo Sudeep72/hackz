@@ -68,7 +68,7 @@ export default function Footer() {
               </a>
             </div>
           </div>
-          <div className="w-[40%] max-w-36">
+          <div className="w-[40%] lg:max-w-48">
             <h4 className=" font-bold text-xl bg-gradient-to-b bg-clip-text leading-none text-transparent from-teal-200 to-teal-800/90">
               Quick Links
             </h4>
@@ -110,7 +110,7 @@ export default function Footer() {
               </li>
             </ul>
           </div>
-          <div className="w-[40%] max-w-36">
+          <div className="w-[40%] lg:max-w-48">
             <h4 className=" font-bold text-xl bg-gradient-to-b bg-clip-text leading-none text-transparent from-teal-200 to-teal-800/90">
               Contact Us
             </h4>

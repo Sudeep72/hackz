@@ -1,6 +1,5 @@
 import React, { useRef } from "react";
 import { motion, useInView } from "framer-motion";
-import { LinkPreview } from "@/components/ui/link-preview";
 
 export default function About() {
   const ref = useRef(null);
@@ -25,17 +24,14 @@ export default function About() {
           What is HackZ’24?
         </h3>
         <p className="tracking-wider text-teal-100/80 sm:leading-8 text-justify sm:text-xl">
-          HackZ’24, an initiative by{" "}
-          <LinkPreview url="https://cseaceg.org.in/" className="font-bold">
-            CSEA
-          </LinkPreview>{" "}
-          is a dynamic 24-hour hackathon that brings together the brightest
-          minds to solve real-world challenges through technology and
-          innovation. Open to engineering students, the hackathon encourages
-          collaboration and out-of-the-box thinking, fostering an environment of
-          learning and innovation. Participants will work in teams to solve
-          industry-relevant problems, with the chance to create impactful
-          solutions that can be scaled and implemented in the real world.
+          HackZ’24, an initiative by CSEA is a dynamic 24-hour hackathon that
+          brings together the brightest minds to solve real-world challenges
+          through technology and innovation. Open to engineering students, the
+          hackathon encourages collaboration and out-of-the-box thinking,
+          fostering an environment of learning and innovation. Participants will
+          work in teams to solve industry-relevant problems, with the chance to
+          create impactful solutions that can be scaled and implemented in the
+          real world.
         </p>
       </div>
     </motion.div>

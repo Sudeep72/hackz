@@ -14,7 +14,7 @@ const ParticlesBg = () => {
   }, [theme]);
 
   return (
-    <div className="fixed h-screen w-screen overflow-hidden">
+    <div className="fixed h-screen w-screen">
       <motion.div
         initial={{ opacity: 0, scale: 0.5 }}
         animate={{ opacity: 1, scale: 1 }}
