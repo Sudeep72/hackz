@@ -93,6 +93,17 @@ module.exports = {
             transform: "translate(-50%, -50%) scale(0.9)",
           },
         },
+        "shine-pulse": {
+          "0%": {
+            "background-position": "0% 0%",
+          },
+          "50%": {
+            "background-position": "100% 100%",
+          },
+          to: {
+            "background-position": "0% 0%",
+          },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
@@ -100,6 +111,7 @@ module.exports = {
         gradient: "gradient 8s linear infinite",
         meteor: "meteor 5s linear infinite",
         ripple: "ripple var(--duration,2s) ease calc(var(--i, 0)*.2s) infinite",
+        "shine-pulse": "shine-pulse 3s ease-in-out infinite",
       },
     },
   },
