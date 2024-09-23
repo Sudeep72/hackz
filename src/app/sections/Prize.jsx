@@ -12,7 +12,7 @@ export default function Prize() {
         {/* Prize Pool */}
         <ShineBorder
           className="relative p-6 text-center w-full max-w-lg bg-gray-800 rounded-xl border border-gray-600 shadow-lg hover:shadow-2xl transform transition-transform duration-300 ease-in-out hover:scale-105 hover:translate-y-1"
-          color={["#FFD700", "#FFA500", "#FF8C00"]}  // Gold/Orange shades
+          color={["#FFD700", "#00BFFF", "#FF8C00"]}
         >
           <h3 className="text-xl mb-2 text-orange-400">* Prize Pool *</h3>
           <p className="text-6xl font-bold text-orange-400">₹ 1,70,000</p>
@@ -22,7 +22,7 @@ export default function Prize() {
         <div className="flex flex-col md:flex-row gap-4 w-full max-w-6xl">
           <ShineBorder
             className="relative p-6 text-center flex-1 bg-gray-800 rounded-xl border border-gray-600 shadow-lg hover:shadow-2xl transform transition-transform duration-300 ease-in-out hover:scale-105 hover:translate-y-1"
-            color={["#FE8FB5", "#FFBE7B", "#A07CFE"]}  // Pink/Orange/Purple shades
+            color={["#FE8FB5", "#00FFFF", "#FF1493"]}
           >
             <h3 className="text-xl mb-2 text-pink-400">* 1st Prize *</h3>
             <p className="text-5xl font-bold text-pink-400 w-full">₹ 75,000</p>
@@ -30,7 +30,7 @@ export default function Prize() {
 
           <ShineBorder
             className="relative p-6 text-center flex-1 bg-gray-800 rounded-xl border border-gray-600 shadow-lg hover:shadow-2xl transform transition-transform duration-300 ease-in-out hover:scale-105 hover:translate-y-1"
-            color={["#00FF00", "#32CD32", "#228B22"]}  // Green shades
+            color={["#00FF00", "#FF4500", "#32CD32"]} 
           >
             <h3 className="text-xl mb-2 text-green-400">* 2nd Prize *</h3>
             <p className="text-5xl font-bold text-green-400 w-full">₹ 50,000</p>
@@ -38,7 +38,7 @@ export default function Prize() {
 
           <ShineBorder
             className="relative p-6 text-center flex-1 bg-gray-800 rounded-xl border border-gray-600 shadow-lg hover:shadow-2xl transform transition-transform duration-300 ease-in-out hover:scale-105 hover:translate-y-1"
-            color={["#4B0082", "#9370DB", "#8A2BE2"]}  // Indigo/Purple shades
+            color={["#4B0082", "#FFD700", "#9370DB"]} 
           >
             <h3 className="text-xl mb-2 text-indigo-400">* 3rd Prize *</h3>
             <p className="text-5xl font-bold text-indigo-400 w-full">₹ 25,000</p>
@@ -49,7 +49,7 @@ export default function Prize() {
         <div className="flex flex-col md:flex-row gap-8 max-w-2xl">
           <ShineBorder
             className="relative p-6 text-center flex-1 bg-gray-800 rounded-xl border border-gray-600 shadow-lg hover:shadow-2xl transform transition-transform duration-300 ease-in-out hover:scale-105 hover:translate-y-1"
-            color={["#FF69B4", "#FF1493", "#DB7093"]}  // Hot pink shades
+            color={["#FF69B4", "#7FFF00", "#FF1493"]}
           >
             <h3 className="text-xl mb-2 text-pink-400">
               * The Best Women&apos;s Team *
@@ -62,7 +62,7 @@ export default function Prize() {
         <div className="flex flex-col md:flex-row gap-8 w-full max-w-4xl">
           <ShineBorder
             className="relative p-6 text-center flex-1 bg-gray-800 rounded-xl border border-gray-600 shadow-lg hover:shadow-2xl transform transition-transform duration-300 ease-in-out hover:scale-105 hover:translate-y-1"
-            color={["#87CEFA", "#4682B4", "#1E90FF"]}  // Light/Deep blue shades
+            color={["#1E90FF", "#FFD700", "#FF6347"]} 
           >
             <h3 className="text-3xl font-bold text-blue-400">
               * Special Track Prize *
@@ -71,7 +71,7 @@ export default function Prize() {
 
           <ShineBorder
             className="relative p-6 text-center flex-1 bg-gray-800 rounded-xl border border-gray-600 shadow-lg hover:shadow-2xl transform transition-transform duration-300 ease-in-out hover:scale-105 hover:translate-y-1"
-            color={["#00BFFF", "#1E90FF", "#6495ED"]}  // Different blue shades
+            color={["#00BFFF", "#FF6347", "#32CD32"]}
           >
             <h3 className="text-3xl font-bold text-blue-400">* Track Prize *</h3>
           </ShineBorder>
