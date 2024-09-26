@@ -27,7 +27,7 @@ export default function HackathonTimeline() {
             </h3>
           </AnimatedText>
           <AnimatedText delay={0.1}>
-            <p className="text-base text-teal-100/80 tracking-wide">
+            <p className="text-base text-teal-100/80 tracking-wide text-justify">
               Registrations for HackZ&apos;24 officially begin, inviting
               participants to embark on an innovative journey. In Round 1,
               participants will submit their ideation solutions to any problem
@@ -48,29 +48,11 @@ export default function HackathonTimeline() {
             </h3>
           </AnimatedText>
           <AnimatedText delay={0.1}>
-            <p className="text-base text-teal-100/80 tracking-wide">
+            <p className="text-base text-teal-100/80 tracking-wide text-justify">
               Round 1 submissions close as teams submit their ideation
               solutions. Judges will carefully evaluate each submission based on
               the clarity, innovation, and feasibility of the proposed ideas,
               setting the stage for the next phase.
-            </p>
-          </AnimatedText>
-        </div>
-      ),
-    },
-    {
-      title: "24 October",
-      content: (
-        <div className="space-y-2 mb-9">
-          <AnimatedText>
-            <h3 className="text-xl font-semibold text-sky-400">
-              Round 1 Concludes
-            </h3>
-          </AnimatedText>
-          <AnimatedText delay={0.1}>
-            <p className="text-base text-teal-100/80 tracking-wide">
-              The online screening phase comes to an end. Good luck to all
-              participants!
             </p>
           </AnimatedText>
         </div>
@@ -86,7 +68,7 @@ export default function HackathonTimeline() {
             </h3>
           </AnimatedText>
           <AnimatedText delay={0.1}>
-            <p className="text-base text-teal-100/80 tracking-wide">
+            <p className="text-base text-teal-100/80 tracking-wide text-justify">
               The list of finalists advancing to Round 2 will be announced.
               These teams have impressed the judges with their ideation and will
               proceed to tackle more complex challenges in the final round.
@@ -105,7 +87,7 @@ export default function HackathonTimeline() {
             </h3>
           </AnimatedText>
           <AnimatedText delay={0.1}>
-            <p className="text-base text-teal-100/80 tracking-wide">
+            <p className="text-base text-teal-100/80 tracking-wide text-justify">
               New and intricate problem statements will be released for the
               second round. The finalists will now be challenged to develop
               their ideas into tangible solutions, working on real-world
@@ -125,7 +107,7 @@ export default function HackathonTimeline() {
             </h3>
           </AnimatedText>
           <AnimatedText delay={0.1}>
-            <p className="text-base text-teal-100/80 tracking-wide">
+            <p className="text-base text-teal-100/80 tracking-wide text-justify">
               The final round kicks off with the 24-hour hackathon. Finalist
               teams will work tirelessly to develop working prototypes, refining
               their solutions under time constraints while displaying teamwork
@@ -145,7 +127,7 @@ export default function HackathonTimeline() {
             </h3>
           </AnimatedText>
           <AnimatedText delay={0.1}>
-            <p className="text-base text-teal-100/80 tracking-wide">
+            <p className="text-base text-teal-100/80 tracking-wide text-justify">
               The hackathon concludes with the submission of final solutions.
               The judges will evaluate the projects, and the winners will be
               announced, celebrating innovative ideas and impactful

@@ -494,11 +494,12 @@ export default function Home() {
                   </span>
                 </AnimatedShinyText>
                 </Link>
-                <div className="mt-6 text-teal-100/80">
+            </motion.div>
+            <div className="mt-6 text-teal-100/80">
                   {/* colors={sparklesColors} */}
                   <SparklesText text="Zap. Zen. Zest. HackZ" className="text-3xl tracking-widest" />
                 </div>
-                <div className="mt-6">
+                <div>
                   <ShimmerButton
                     shimmerColor="#ffffff"
                     shimmerSize="0.05em"
@@ -512,7 +513,6 @@ export default function Home() {
                     </span>
                   </ShimmerButton>
                 </div>
-            </motion.div>
           </motion.div>
           <div
             className={`w-full max-w-sm lg:w-1/2 h-96 lg:h-[520px] lg:max-w-none lg:ml-auto transition-opacity duration-1000 ease-in-out ${showGlobe ? "opacity-100" : "opacity-0"

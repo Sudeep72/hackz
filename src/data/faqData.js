@@ -23,10 +23,6 @@ const faqData = [
         content: "No, participants must form teams of at least 2 members to compete.",
       },
       {
-        title: "Do all team members need to apply individually?",
-        content: "No, only one application per team is required during registration.",
-      },
-      {
         title: "Is being a student a requirement for participation?",
         content: "Yes, only students currently enrolled in engineering colleges in India are eligible to participate.",
       },
@@ -130,10 +126,6 @@ const faqData = [
       },
       {
         title: "Who should I contact if I have more questions?",
-        content: "You can reach out to the organizers through the event’s official page on Unstop or contact the CSEA team for further queries.",
-      },
-      {
-        title: "What should I do if I have further questions not covered in the FAQs?",
         content: "You can reach out to the organizers through the event’s official page on Unstop or contact the CSEA team for further queries.",
       },
     ],

@@ -40,12 +40,12 @@ export default function Footer() {
             </p>
             <div className="flex gap-2 py-4">
               <a
-                href="#"
+                href="https://www.instagram.com/csea_ceg"
                 className="p-2 rounded-full text-sky-400/70 hover:text-sky-800 transition-colors"
               >
                 <Instagram size={24} />
               </a>
-              <a
+              {/* <a
                 href="#"
                 className="p-2 rounded-full text-sky-400/70 hover:text-sky-800 transition-colors"
               >
@@ -56,9 +56,9 @@ export default function Footer() {
                 className="p-2 rounded-full text-sky-400/70 hover:text-sky-800 transition-colors"
               >
                 <Twitter size={24} />
-              </a>
+              </a> */}
               <a
-                href="#"
+                href="https://www.linkedin.com/company/csea-ceg"
                 className="p-2 rounded-full text-sky-400/70 hover:text-sky-800 transition-colors"
               >
                 <Linkedin size={24} />

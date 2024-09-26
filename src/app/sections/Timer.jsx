@@ -4,7 +4,7 @@ import { useInView } from "framer-motion";
 import GridPattern from "@/components/magicui/grid-pattern";
 import { cn } from "@/lib/utils";
 
-const endDate = new Date("2024-10-10T00:00:00");
+const endDate = new Date("2024-11-09T09:00:00");
 
 const calculateTimeRemaining = (endDate) => {
   const now = new Date();
