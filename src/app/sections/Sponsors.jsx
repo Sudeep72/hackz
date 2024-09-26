@@ -38,8 +38,8 @@ export default function Sponsors() {
               <Image
                 src={temenos}
                 alt="Temenos Logo"
-                width={320}
-                height={200}
+                width={440}
+                height={300}
                 className="py-3 px-6 rounded-md backdrop-blur-sm border-2 transition-all transform hover:scale-105 hover:shadow-lg duration-300"
               />
             </a>
@@ -58,8 +58,8 @@ export default function Sponsors() {
               <Image
                 src={unstop}
                 alt="Unstop Logo"
-                width={280}
-                height={200}
+                width={240}
+                height={100}
                 className="py-4 px-6 rounded-md backdrop-blur-sm border-2 transition-all transform hover:scale-105 hover:shadow-lg duration-300"
               />
             </a>

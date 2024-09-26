@@ -1,8 +1,21 @@
-import React from "react";
+import React, { useRef } from "react";
 import Ripple from "@/components/magicui/ripple";
+import { motion, useInView } from "framer-motion";
 
 export default function JoinUs() {
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true });
   return (
+    <motion.div
+    ref={ref}
+    initial="hidden"
+    animate={isInView ? "show" : "hidden"}
+    variants={{
+      hidden: { opacity: 0, y: 100 },
+      show: { opacity: 1, y: 0, transition: { duration: 0.5 } },
+    }}
+    className="flex flex-col justify-center items-center mx-4 mb-48 pt-20"
+  >
     <div className="pt-20">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 bg-transparent p-8 rounded-3xl">
         <div className="relative overflow-hidden p-8 rounded-3xl bg-transparent border-2 border-dashed border-sky-950/40 bg-gradient-to-b from-cyan-950/20 to-teal-950/20 backdrop-blur-md">
@@ -42,5 +55,6 @@ export default function JoinUs() {
         </div>
       </div>
     </div>
+    </motion.div>
   );
 }

@@ -1,16 +1,28 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import { TransitionPanel } from "@/components/effects/transition-panel";
-
 import faqData from "@/data/faqData";
+import { motion, useInView } from "framer-motion";
 
 export default function Faq() {
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true });
   const [activeIndex, setActiveIndex] = useState(0);
 
   const ITEMS = faqData;
 
   return (
+    <motion.div
+    ref={ref}
+    initial="hidden"
+    animate={isInView ? "show" : "hidden"}
+    variants={{
+      hidden: { opacity: 0, y: 100 },
+      show: { opacity: 1, y: 0, transition: { duration: 0.5 } },
+    }}
+    className="flex flex-col justify-center items-center mx-4 mb-48 pt-20"
+  >
     <div className="max-w-6xl mx-auto py-20 relative px-4">
       <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold bg-gradient-to-t bg-clip-text leading-none text-transparent from-teal-200 to-teal-800/90 mb-12">
         FAQs
@@ -68,5 +80,6 @@ export default function Faq() {
         </TransitionPanel>
       </div>
     </div>
+  </motion.div>
   );
 }

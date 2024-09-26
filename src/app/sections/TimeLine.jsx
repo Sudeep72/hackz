@@ -1,8 +1,8 @@
 "use client";
 
-import React from "react";
+import React, { useRef } from "react";
 import { Timeline } from "@/components/ui/timeline";
-import { motion } from "framer-motion";
+import { motion, useInView } from "framer-motion";
 
 const AnimatedText = ({ children, delay = 0 }) => (
   <motion.span
@@ -15,7 +15,9 @@ const AnimatedText = ({ children, delay = 0 }) => (
   </motion.span>
 );
 
-export default function HackathonTimeline() {
+export default function HackathonTimeline(){
+const ref = useRef(null);
+const isInView = useInView(ref, { once: true });
   const data = [
     {
       title: "28 September ",
@@ -140,11 +142,21 @@ export default function HackathonTimeline() {
   ];
 
   return (
+    <motion.div
+    ref={ref}
+    initial="hidden"
+    animate={isInView ? "show" : "hidden"}
+    variants={{
+      hidden: { opacity: 0, y: 100 },
+      show: { opacity: 1, y: 0, transition: { duration: 0.5 } },
+    }}
+  >
     <div className="w-full max-w-4xl mx-auto p-6 rounded-xl shadow-lg pt-28">
       <h2 className="text-3xl text-center sm:text-4xl md:text-5xl font-bold bg-gradient-to-t bg-clip-text leading-none text-transparent from-teal-200 to-teal-800/90">
         Timeline
       </h2>
       <Timeline data={data} />
     </div>
+    </motion.div>
   );
 }
