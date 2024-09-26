@@ -88,7 +88,7 @@ export default function Footer() {
             <ul className="mt-4 text-sm tracking-wider text-foreground/80 grid grid-cols-2 sm:grid-cols-1 gap-x-4 gap-y-2">
               <li>
                 <a href="#about" className="hover:underline">
-                  About Us
+                  About
                 </a>
               </li>
               <li>
@@ -141,7 +141,7 @@ export default function Footer() {
                 </a>
               </li>
               <li className="flex flex-col space-y-1">
-                <span className="text-base text-sky-300">Padmasharan</span>
+                <span className="text-base text-sky-300">Sharan</span>
                 <a href="tel:+91 95856 12262" className="hover:underline">
                   +91 95856 12262
                 </a>
