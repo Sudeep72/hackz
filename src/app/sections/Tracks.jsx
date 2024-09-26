@@ -1,16 +1,27 @@
 "use client";
 
-import React from "react";
+import React, { useRef } from "react";
 import { HoverEffect } from "@/components/ui/card-hover-effect";
 import { tracks } from "@/data/tracks";
-import { AnimatePresence, motion } from "framer-motion";
+import { AnimatePresence, motion, useInView } from "framer-motion";
 import { CanvasRevealEffect } from "@/components/ui/canvas-reveal-effect";
 import Image from "next/image";
 import WomenEmpowerment from "@/assets/tracks/womenempowerment.png";
 import { Gem } from "lucide-react";
 
 export default function Tracks() {
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true });
   return (
+    <motion.div
+    ref={ref}
+    initial="hidden"
+    animate={isInView ? "show" : "hidden"}
+    variants={{
+      hidden: { opacity: 0, y: 100 },
+      show: { opacity: 1, y: 0, transition: { duration: 0.5 } },
+    }}
+  >
     <div
       className="relative flex flex-col justify-center items-center pt-20 mb-24"
       id="tracks"
@@ -35,6 +46,7 @@ export default function Tracks() {
         <HoverEffect items={tracks} />
       </div>
     </div>
+    </motion.div>
   );
 }
 

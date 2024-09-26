@@ -1,10 +1,22 @@
-import React from "react";
+import React, { useRef } from "react";
 import Image from "next/image";
+import { motion, useInView } from "framer-motion";
 import temenos from "@/assets/sponsors/temenos.png";
 import unstop from "@/assets/sponsors/unstop.png";
 
-const Sponsors = () => {
+export default function Sponsors() {
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true });
   return (
+    <motion.div
+    ref={ref}
+    initial="hidden"
+    animate={isInView ? "show" : "hidden"}
+    variants={{
+      hidden: { opacity: 0, y: 100 },
+      show: { opacity: 1, y: 0, transition: { duration: 0.5 } },
+    }}
+  >
     <div
       className="relative flex flex-col justify-center items-center pt-20 mb-24"
       id="sponsors"
@@ -55,7 +67,6 @@ const Sponsors = () => {
         </div>
       </div>
     </div>
+    </motion.div>
   );
 };
-
-export default Sponsors;

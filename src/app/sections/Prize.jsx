@@ -1,8 +1,20 @@
-import React from "react";
+import React, { useRef } from "react";
 import ShineBorder from "@/components/magicui/shine-border";
+import { motion, useInView } from "framer-motion";
 
 export default function Prize() {
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true });
   return (
+    <motion.div
+    ref={ref}
+    initial="hidden"
+    animate={isInView ? "show" : "hidden"}
+    variants={{
+      hidden: { opacity: 0, y: 100 },
+      show: { opacity: 1, y: 0, transition: { duration: 0.5 } },
+    }}
+  >
     <div className="flex flex-col items-center p-6 cursor-default">
       <h2 className="text-3xl text-center sm:text-4xl md:text-5xl font-bold bg-gradient-to-t bg-clip-text leading-none text-transparent from-teal-200 to-teal-800/90 mb-12 pt-20">
         Prizes
@@ -78,5 +90,6 @@ export default function Prize() {
         </div>
       </div>
     </div>
+    </motion.div>
   );
 }
