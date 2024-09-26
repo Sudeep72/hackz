@@ -66,18 +66,18 @@ export default function Footer() {
             </div>
             <div>
               <a
-                href="mailto:mail@sudeepdev.co"
+                href="mailto:hackz.csea@gmail.com"
                 className="flex items-center tracking-wider text-teal-200/80 hover:underline"
               >
                 <Mail className="h-4 w-4 mr-2 text-emerald-400" />
-                mail@sudeepdev.co
+                hackz.csea@gmail.com
               </a>
               <a
-                href="mailto:mail@csea.org.in"
+                href="mailto:cseaceg25@gmail.com"
                 className="flex items-center tracking-wider text-teal-200/80 hover:underline"
               >
                 <Mail className="h-4 w-4 mr-2 text-emerald-400" />
-                mail@csea.org.in
+                cseaceg25@gmail.com
               </a>
             </div>
           </div>

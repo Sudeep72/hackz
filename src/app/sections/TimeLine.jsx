@@ -18,7 +18,7 @@ const AnimatedText = ({ children, delay = 0 }) => (
 export default function HackathonTimeline() {
   const data = [
     {
-      title: "27 September ",
+      title: "28 September ",
       content: (
         <div className="space-y-2 mb-9">
           <AnimatedText>

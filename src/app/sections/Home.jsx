@@ -10,6 +10,8 @@ import ShinyButton from "@/components/magicui/shiny-button";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { FADE_UP_ANIMATION_VARIANTS } from "@/lib/utils";
+import SparklesText from "@/components/magicui/sparkles-text";
+import ShimmerButton from "@/components/magicui/shimmer-button";
 
 const World = dynamic(
   () => import("@/components/ui/globe").then((m) => m.World),
@@ -25,6 +27,7 @@ const World = dynamic(
 
 export default function Home() {
   const [showGlobe, setShowGlobe] = useState(false);
+  // const sparklesColors = { first: '#A7F3D0', second: '#6EE7B7' };
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -490,13 +493,30 @@ export default function Home() {
                     Anna University, Chennai
                   </span>
                 </AnimatedShinyText>
-              </Link>
+                </Link>
+                <div className="mt-4 text-teal-100/80">
+                  {/* colors={sparklesColors} */}
+                  <SparklesText text="Zap. Zen. Zest. HackZ" className="text-3xl tracking-widest" />
+                </div>
+                <div>
+                  <ShimmerButton
+                    shimmerColor="#ffffff"
+                    shimmerSize="0.05em"
+                    borderRadius="100px"
+                    shimmerDuration="3s"
+                    background="hsl(var(--background))"
+                    className="shadow-2xl mt-6"
+                  >
+                    <span className="whitespace-pre-wrap text-center text-base font-medium leading-none text-white dark:from-white dark:to-slate-900/10" disbaled>
+                      Registrations open Soon!
+                    </span>
+                  </ShimmerButton>
+                </div>
             </motion.div>
           </motion.div>
           <div
-            className={`w-full max-w-sm lg:w-1/2 h-96 lg:h-[520px] lg:max-w-none lg:ml-auto transition-opacity duration-1000 ease-in-out ${
-              showGlobe ? "opacity-100" : "opacity-0"
-            }`}
+            className={`w-full max-w-sm lg:w-1/2 h-96 lg:h-[520px] lg:max-w-none lg:ml-auto transition-opacity duration-1000 ease-in-out ${showGlobe ? "opacity-100" : "opacity-0"
+              }`}
           >
             {showGlobe && <World data={sampleArcs} globeConfig={globeConfig} />}
           </div>
