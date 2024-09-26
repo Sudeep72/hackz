@@ -12,6 +12,8 @@ import { motion } from "framer-motion";
 import { FADE_UP_ANIMATION_VARIANTS } from "@/lib/utils";
 import SparklesText from "@/components/magicui/sparkles-text";
 import ShimmerButton from "@/components/magicui/shimmer-button";
+import Image from "next/image";
+import temenos from "@/assets/sponsors/temenos'.png";
 
 const World = dynamic(
   () => import("@/components/ui/globe").then((m) => m.World),
@@ -455,6 +457,21 @@ export default function Home() {
               </Link>
             </motion.div>
 
+            <div className="flex gap-6 sm:gap-8">
+              <a
+                // href="https://www.temenos.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Image
+                  src={temenos}
+                  alt="Temenos Logo"
+                  width={220}
+                  height={100}
+                />
+              </a>
+            </div>
+
             <motion.h1
               variants={FADE_UP_ANIMATION_VARIANTS}
               className="font-extrabold mb-4 flex text-7xl sm:text-8xl lg:text-9xl lg:w-[32rem] tracking-widest text-teal-100/80"
@@ -493,30 +510,37 @@ export default function Home() {
                     Anna University, Chennai
                   </span>
                 </AnimatedShinyText>
-                </Link>
+              </Link>
             </motion.div>
             <div className="mt-6 text-teal-100/80">
-                  {/* colors={sparklesColors} */}
-                  <SparklesText text="Zap. Zen. Zest. HackZ" className="text-3xl tracking-widest" />
-                </div>
-                <div>
-                  <ShimmerButton
-                    shimmerColor="#ffffff"
-                    shimmerSize="0.05em"
-                    borderRadius="100px"
-                    shimmerDuration="3s"
-                    background="hsl(var(--background))"
-                    className="shadow-2xl mt-6"
-                  >
-                    <span className="whitespace-pre-wrap text-center text-base font-medium leading-none text-white dark:from-white dark:to-slate-900/10" disbaled>
-                      Registrations open Soon!
-                    </span>
-                  </ShimmerButton>
-                </div>
+              {/* colors={sparklesColors} */}
+              <SparklesText
+                text="Zap. Zen. Zest. HackZ"
+                className="text-3xl tracking-widest"
+              />
+            </div>
+            <div>
+              <ShimmerButton
+                shimmerColor="#ffffff"
+                shimmerSize="0.05em"
+                borderRadius="100px"
+                shimmerDuration="3s"
+                background="hsl(var(--background))"
+                className="shadow-2xl mt-6"
+              >
+                <span
+                  className="whitespace-pre-wrap text-center text-base font-medium leading-none text-white dark:from-white dark:to-slate-900/10"
+                  disbaled
+                >
+                  Registrations open Soon!
+                </span>
+              </ShimmerButton>
+            </div>
           </motion.div>
           <div
-            className={`w-full max-w-sm lg:w-1/2 h-96 lg:h-[520px] lg:max-w-none lg:ml-auto transition-opacity duration-1000 ease-in-out ${showGlobe ? "opacity-100" : "opacity-0"
-              }`}
+            className={`w-full max-w-sm lg:w-1/2 h-96 lg:h-[520px] lg:max-w-none lg:ml-auto transition-opacity duration-1000 ease-in-out ${
+              showGlobe ? "opacity-100" : "opacity-0"
+            }`}
           >
             {showGlobe && <World data={sampleArcs} globeConfig={globeConfig} />}
           </div>

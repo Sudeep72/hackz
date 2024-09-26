@@ -4,7 +4,7 @@ import ShineBorder from "@/components/magicui/shine-border";
 export default function Prize() {
   return (
     <div className="flex flex-col items-center p-6 cursor-default">
-      <h2 className="text-3xl text-center sm:text-4xl md:text-5xl font-bold bg-gradient-to-t bg-clip-text leading-none text-transparent from-teal-200 to-teal-800/90 mb-12">
+      <h2 className="text-3xl text-center sm:text-4xl md:text-5xl font-bold bg-gradient-to-t bg-clip-text leading-none text-transparent from-teal-200 to-teal-800/90 mb-12 pt-20">
         Prizes
       </h2>
 

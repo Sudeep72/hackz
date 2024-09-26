@@ -11,8 +11,11 @@ import { Gem } from "lucide-react";
 
 export default function Tracks() {
   return (
-    <div className="mt-8 relative">
-      <div className="relative z-10 mb-20">
+    <div
+      className="relative flex flex-col justify-center items-center pt-20 mb-24"
+      id="tracks"
+    >
+      <div className="relative z-10">
         <h2 className="text-3xl text-center sm:text-4xl md:text-5xl font-bold bg-gradient-to-t bg-clip-text leading-none text-transparent from-teal-200 to-teal-800/90 mb-12">
           Tracks
         </h2>

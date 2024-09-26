@@ -6,6 +6,25 @@ html {
   scroll-behavior: smooth !important;
 }
 
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  border-radius: 10px;
+  background: none;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #002935; 
+  border-radius: 10px;
+}
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #1e3b44; 
+}
+
 @layer base {
   :root {
     --background: 222.2 84% 4.9%;
