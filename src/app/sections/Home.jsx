@@ -494,11 +494,11 @@ export default function Home() {
                   </span>
                 </AnimatedShinyText>
                 </Link>
-                <div className="mt-4 text-teal-100/80">
+                <div className="mt-6 text-teal-100/80">
                   {/* colors={sparklesColors} */}
                   <SparklesText text="Zap. Zen. Zest. HackZ" className="text-3xl tracking-widest" />
                 </div>
-                <div>
+                <div className="mt-6">
                   <ShimmerButton
                     shimmerColor="#ffffff"
                     shimmerSize="0.05em"
