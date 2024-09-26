@@ -27,12 +27,13 @@ export default function Footer() {
         />
         <div className="px-6 py-4 md:px-10 md:py-8 flex flex-wrap gap-8 lg:gap-12">
           <div className="mr-auto">
-            <LinkPreview
-              url="https://cseaceg.org.in/"
+            <a
+              href="https://cseaceg.org.in/"
               className="text-4xl font-bold tracking-widest bg-gradient-to-r bg-clip-text leading-none dark:text-transparent from-teal-500/80 from-70% to-sky-500/90"
+              target="_blank"
             >
               CSEA
-            </LinkPreview>
+            </a>
             <p className="text-sm text-foreground/60 mt-4 max-w-sm tracking-wider">
               The Computer Science and Engineering Association of College of
               Engineering, Guindy
@@ -86,37 +87,37 @@ export default function Footer() {
             </h4>
             <ul className="mt-4 text-sm tracking-wider text-foreground/80 grid grid-cols-2 sm:grid-cols-1 gap-x-4 gap-y-2">
               <li>
-                <a href="#" className="hover:underline">
+                <a href="#about" className="hover:underline">
                   About Us
                 </a>
               </li>
               <li>
-                <a href="#" className="hover:underline">
+                <a href="#sponsors" className="hover:underline">
                   Sponsors
                 </a>
               </li>
               <li>
-                <a href="#" className="hover:underline">
-                  Prized
+                <a href="#prizes" className="hover:underline">
+                  Prizes
                 </a>
               </li>
               <li>
-                <a href="#" className="hover:underline">
+                <a href="#tracks" className="hover:underline">
                   Tracks
                 </a>
               </li>
               <li>
-                <a href="#" className="hover:underline">
+                <a href="#faqs" className="hover:underline">
                   FAQs
                 </a>
               </li>
-              <li>
+              {/* <li>
                 <a href="#" className="hover:underline">
                   Contact
                 </a>
-              </li>
+              </li> */}
               <li>
-                <a href="#" className="hover:underline">
+                <a href="#joinus" className="hover:underline">
                   Join Us
                 </a>
               </li>
@@ -128,27 +129,27 @@ export default function Footer() {
             </h4>
             <ul className="mt-4 text-sm tracking-wider text-foreground/80 grid grid-cols-2 sm:grid-cols-1 gap-x-4 gap-y-2">
               <li className="flex flex-col space-y-1">
-                <span className="text-base text-sky-300">Sudeep</span>
-                <a href="tel:+91 63806 56451" className="hover:underline">
-                  +91 63806 56451
+                <span className="text-base text-sky-300">Sunil Kumar</span>
+                <a href="tel:+91 63831 23505" className="hover:underline">
+                  +91 63831 23505
                 </a>
               </li>
               <li className="flex flex-col space-y-1">
-                <span className="text-base text-sky-300">Sudeep</span>
-                <a href="tel:+91 63806 56451" className="hover:underline">
-                  +91 63806 56451
+                <span className="text-base text-sky-300">Smrithi Prakash</span>
+                <a href="tel:+91 80728 69255" className="hover:underline">
+                  +91 80728 69255
                 </a>
               </li>
               <li className="flex flex-col space-y-1">
-                <span className="text-base text-sky-300">Sudeep</span>
-                <a href="tel:+91 63806 56451" className="hover:underline">
-                  +91 63806 56451
+                <span className="text-base text-sky-300">Padmasharan</span>
+                <a href="tel:+91 95856 12262" className="hover:underline">
+                  +91 95856 12262
                 </a>
               </li>
               <li className="flex flex-col space-y-1">
-                <span className="text-base text-sky-300">Sudeep</span>
-                <a href="tel:+91 63806 56451" className="hover:underline">
-                  +91 63806 56451
+                <span className="text-base text-sky-300">Varsha</span>
+                <a href="tel:+91 6382 952323" className="hover:underline">
+                  +91 63829 52323
                 </a>
               </li>
             </ul>

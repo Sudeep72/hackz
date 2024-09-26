@@ -18,18 +18,21 @@ const AnimatedText = ({ children, delay = 0 }) => (
 export default function HackathonTimeline() {
   const data = [
     {
-      title: "1 October",
+      title: "27 September ",
       content: (
         <div className="space-y-2 mb-9">
           <AnimatedText>
             <h3 className="text-xl font-semibold text-teal-400">
-              Registration Opens
+              Registrations Open & Commencement of Round 1
             </h3>
           </AnimatedText>
           <AnimatedText delay={0.1}>
             <p className="text-base text-teal-100/80 tracking-wide">
-              Get ready to embark on an exciting journey! Registration for our
-              hackathon begins today.
+              Registrations for HackZ&apos;24 officially begin, inviting
+              participants to embark on an innovative journey. In Round 1,
+              participants will submit their ideation solutions to any problem
+              statement within the specified domains, allowing them to showcase
+              their creativity and problem-solving approach.
             </p>
           </AnimatedText>
         </div>
@@ -41,12 +44,15 @@ export default function HackathonTimeline() {
         <div className="space-y-2 mb-9">
           <AnimatedText>
             <h3 className="text-xl font-semibold text-rose-400">
-              Registration Closes & Round 1 Begins
+              Conclusion of Round 1
             </h3>
           </AnimatedText>
           <AnimatedText delay={0.1}>
             <p className="text-base text-teal-100/80 tracking-wide">
-              Last day to register! Online screening (Round 1) kicks off today.
+              Round 1 submissions close as teams submit their ideation
+              solutions. Judges will carefully evaluate each submission based on
+              the clarity, innovation, and feasibility of the proposed ideas,
+              setting the stage for the next phase.
             </p>
           </AnimatedText>
         </div>
@@ -76,30 +82,34 @@ export default function HackathonTimeline() {
         <div className="space-y-2 mb-9">
           <AnimatedText>
             <h3 className="text-xl font-semibold text-teal-400">
-              Finalists Announced
+              Release of Selected Finalists
             </h3>
           </AnimatedText>
           <AnimatedText delay={0.1}>
             <p className="text-base text-teal-100/80 tracking-wide">
-              The moment of truth! Finalists for Round 2 will be revealed today.
+              The list of finalists advancing to Round 2 will be announced.
+              These teams have impressed the judges with their ideation and will
+              proceed to tackle more complex challenges in the final round.
             </p>
           </AnimatedText>
         </div>
       ),
     },
     {
-      title: "28 October",
+      title: "2 November",
       content: (
         <div className="space-y-2 mb-9">
           <AnimatedText>
             <h3 className="text-xl font-semibold text-cyan-600">
-              Problem Statements Released
+              Release of Round 2 Problem Statements
             </h3>
           </AnimatedText>
           <AnimatedText delay={0.1}>
             <p className="text-base text-teal-100/80 tracking-wide">
-              Finalists, get ready! Problem statements for Round 2 will be
-              announced.
+              New and intricate problem statements will be released for the
+              second round. The finalists will now be challenged to develop
+              their ideas into tangible solutions, working on real-world
+              problems across impactful domains.
             </p>
           </AnimatedText>
         </div>
@@ -111,13 +121,15 @@ export default function HackathonTimeline() {
         <div className="space-y-2 mb-9">
           <AnimatedText>
             <h3 className="text-xl font-semibold text-emerald-400">
-              24-Hour Hackathon Begins
+              Commencement of 24-Hour Hackathon (Round 2)
             </h3>
           </AnimatedText>
           <AnimatedText delay={0.1}>
             <p className="text-base text-teal-100/80 tracking-wide">
-              The main event starts now! 24 hours of intense coding and
-              creativity.
+              The final round kicks off with the 24-hour hackathon. Finalist
+              teams will work tirelessly to develop working prototypes, refining
+              their solutions under time constraints while displaying teamwork
+              and technical prowess.
             </p>
           </AnimatedText>
         </div>
@@ -129,13 +141,15 @@ export default function HackathonTimeline() {
         <div className="space-y-2 mb-9">
           <AnimatedText>
             <h3 className="text-xl font-semibold text-rose-400">
-              Hackathon Concludes
+              Conclusion of Hackathon
             </h3>
           </AnimatedText>
           <AnimatedText delay={0.1}>
             <p className="text-base text-teal-100/80 tracking-wide">
-              Times up! The 24-hour hackathon comes to an end. Congratulations
-              to all participants!
+              The hackathon concludes with the submission of final solutions.
+              The judges will evaluate the projects, and the winners will be
+              announced, celebrating innovative ideas and impactful
+              contributions to society.
             </p>
           </AnimatedText>
         </div>

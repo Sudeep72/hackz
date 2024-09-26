@@ -12,8 +12,8 @@ export default function JoinUs() {
               Want to Join Us?
             </h2>
             <p className="text-lg md:text-xl font-medium tracking-wide text-foreground/60">
-              Reach hundreds of students and potential customers by sponsoring{" "}
-              <span className="text-teal-500">HackZ</span>
+              Reach hundreds of students and increase your network by working
+              with <span className="text-teal-500">HackZ</span>
             </p>
           </div>
           <div className="flex flex-col md:flex-row justify-center space-y-4 md:space-y-0 md:space-x-4">
@@ -32,7 +32,7 @@ export default function JoinUs() {
             <button className="min-w-36 relative inline-flex h-12 overflow-hidden rounded-full p-[1px] focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50 group">
               <span className="absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#0d9488_0%,#0891b2_50%,#0d9488_100%)]" />
               <span className="inline-flex h-full w-full cursor-pointer items-center justify-center rounded-full bg-slate-950 px-3 py-1 text-sm font-medium text-white backdrop-blur-3xl">
-                Call for Sponsors{" "}
+                Call for Volunteers{" "}
                 <span className="ml-2 group-hover:translate-x-1 transition-transform">
                   →
                 </span>
