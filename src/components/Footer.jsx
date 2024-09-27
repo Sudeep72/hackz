@@ -141,7 +141,7 @@ export default function Footer() {
                 </a>
               </li>
               <li className="flex flex-col space-y-1">
-                <span className="text-base text-sky-300">Padmasharan</span>
+                <span className="text-base text-sky-300">Sharan</span>
                 <a href="tel:+91 95856 12262" className="hover:underline">
                   +91 95856 12262
                 </a>
