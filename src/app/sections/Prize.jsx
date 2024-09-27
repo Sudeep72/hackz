@@ -91,5 +91,6 @@ export default function Prize() {
       </div>
     </div>
     </motion.div>
+    // end
   );
 }
