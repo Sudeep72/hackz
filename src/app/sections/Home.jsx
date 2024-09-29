@@ -2,7 +2,7 @@
 import React, { useEffect, useState } from "react";
 import dynamic from "next/dynamic";
 import RotateText from "@/components/effects/rotate-text";
-import { LocateFixed } from "lucide-react";
+import { LocateFixed, CalendarDays, Code } from "lucide-react";
 import Spinner from "@/components/ui/spinner";
 import AnimatedShinyText from "@/components/magicui/animated-shiny-text";
 import { LinkPreview } from "@/components/ui/link-preview";
@@ -16,7 +16,7 @@ import Image from "next/image";
 import temenos from "@/assets/sponsors/temenos'.png";
 import { cn } from "@/lib/utils";
 import AnimatedGradientText from "@/components/magicui/animated-gradient-text";
-import { CalendarDays } from "lucide-react";
+
 const World = dynamic(
   () => import("@/components/ui/globe").then((m) => m.World),
   {
@@ -499,9 +499,10 @@ export default function Home() {
             </div>
             <motion.div
               variants={FADE_UP_ANIMATION_VARIANTS}
-              className="text-base tracking-widest normal-case text-cyan-300/70 mx-0"
+              className="flex items-center text-base tracking-widest normal-case text-cyan-300/70 mx-0"
             >
-              Around-the-clock National Hack Fest
+              <Code color="#2AD3DF" className="mr-2" />
+              | 24-Hour National Tech Marathon: Innovate, Create, Dominate!
             </motion.div>
             {/* <motion.div
               variants={FADE_UP_ANIMATION_VARIANTS}
