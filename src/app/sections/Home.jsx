@@ -14,7 +14,9 @@ import SparklesText from "@/components/magicui/sparkles-text";
 import ShimmerButton from "@/components/magicui/shimmer-button";
 import Image from "next/image";
 import temenos from "@/assets/sponsors/temenos'.png";
-
+import { cn } from "@/lib/utils";
+import AnimatedGradientText from "@/components/magicui/animated-gradient-text";
+import { CalendarDays } from "lucide-react";
 const World = dynamic(
   () => import("@/components/ui/globe").then((m) => m.World),
   {
@@ -443,7 +445,7 @@ export default function Home() {
             }}
             className="flex flex-col items-center text-center lg:items-start mb-6 mx-auto md:mb-0 gap-2"
           >
-            <motion.div variants={FADE_UP_ANIMATION_VARIANTS}>
+            {/* <motion.div variants={FADE_UP_ANIMATION_VARIANTS}>
               <Link href="https://cseaceg.org.in/" target="_blank">
                 <ShinyButton className="rounded-full mb-4 bg-cyan-950/10">
                   <span className="text-xs sm:text-sm">
@@ -455,7 +457,7 @@ export default function Home() {
                   </span>
                 </ShinyButton>
               </Link>
-            </motion.div>
+            </motion.div> */}
 
             <div className="flex gap-6 sm:gap-8">
               <a
@@ -488,13 +490,68 @@ export default function Home() {
               />
               <RotateText letters={["𝐙", "𝗭", "𝓩", "Ź", "ℤ"]} interval={6500} />
             </motion.h1>
-            <motion.div
+            <div className="mt-6 text-teal-100/80">
+              {/* colors={sparklesColors} */}
+              <SparklesText
+                text="Zap. Zen. Zest. HackZ"
+                className="text-3xl tracking-widest"
+              />
+            </div>
+            {/* <motion.div
               variants={FADE_UP_ANIMATION_VARIANTS}
               className="text-base tracking-widest normal-case text-cyan-300/70 mx-0"
             >
-              24-Hour National Hackathon
+              Around-the-clock National Hack Fest
+            </motion.div> */}
+            {/* <motion.div
+              variants={FADE_UP_ANIMATION_VARIANTS}
+              className="text-base tracking-widest normal-case text-cyan-300/70 mx-0"
+            >
+              November 9-10, 2024
+            </motion.div> */}
+             <motion.div variants={FADE_UP_ANIMATION_VARIANTS}>
+              <Link href="https://cseaceg.org.in/" target="_blank">
+                <ShinyButton className="rounded-full mt-3 p-3 bg-cyan-950/10">
+                  <span className="text-xs sm:text-sm">
+                    Presented by
+                    ✨{" "}
+                    <span className="font-medium text-cyan-400 tracking-widest">
+                      CSEA-CEG
+                    </span>{" "}
+                  </span>
+                </ShinyButton>
+              </Link>
             </motion.div>
-
+            <div className="z-0 flex mt-4 mb-4 items-center justify-center">
+              <AnimatedGradientText>
+              <CalendarDays
+                    className="absolute left-2 top-1/2 transform -translate-y-1/2 pr-1"
+                    size={16}
+                    strokeWidth={2.5}
+                />
+                <hr className="mx-2 h-4 w-px shrink-0 bg-gray-300" />{" "}
+                <span
+                  className={cn(
+                    `inline animate-gradient bg-gradient-to-r from-[#d16ba5] via-[#86a8e7] to-[#5ffbf1] bg-[length:var(--bg-size)_100%] bg-clip-text text-transparent`,
+                  )}
+                >
+                  November 9-10, 2024
+                </span>
+                {/* <ChevronRight className="ml-1 size-3 transition-transform duration-300 ease-in-out group-hover:translate-x-0.5" /> */}
+              </AnimatedGradientText>
+            </div>
+            {/* <motion.div variants={FADE_UP_ANIMATION_VARIANTS}>
+              <AnimatedShinyText className="mx-0 mt-4 inline-flex items-center justify-center px-4 py-2 transition ease-out hover:text-emerald-600 hover:duration-300 hover:dark:text-emerald-400 border border-sky-400/10 rounded-[8px] backdrop-blur-sm ">
+                <LocateFixed
+                  className="absolute left-2 top-1/2 transform -translate-y-1/2"
+                  size={16}
+                  strokeWidth={2.5}
+                />
+                <span className="text-xs ml-4 font-medium tracking-widest">
+                  November 9-10, 2024
+                </span>
+              </AnimatedShinyText>
+            </motion.div> */}
             <motion.div variants={FADE_UP_ANIMATION_VARIANTS}>
               <Link
                 href="https://maps.app.goo.gl/JL1mG5KUfTrLS6Pg6"
@@ -512,15 +569,9 @@ export default function Home() {
                 </AnimatedShinyText>
               </Link>
             </motion.div>
-            <div className="mt-6 text-teal-100/80">
-              {/* colors={sparklesColors} */}
-              <SparklesText
-                text="Zap. Zen. Zest. HackZ"
-                className="text-3xl tracking-widest"
-              />
-            </div>
+
             <div>
-            <LinkPreview url="https://unstop.com/p/hackz24-computer-science-and-engineering-association-csea-ceg-anna-university-1171819" className="font-bold">
+              <LinkPreview url="https://unstop.com/p/hackz24-computer-science-and-engineering-association-csea-ceg-anna-university-1171819" className="font-bold">
                 <ShimmerButton
                   shimmerColor="#ffffff"
                   shimmerSize="0.05em"
@@ -537,9 +588,8 @@ export default function Home() {
             </div>
           </motion.div>
           <div
-            className={`w-full max-w-sm lg:w-1/2 h-96 lg:h-[520px] lg:max-w-none lg:ml-auto transition-opacity duration-1000 ease-in-out ${
-              showGlobe ? "opacity-100" : "opacity-0"
-            }`}
+            className={`w-full max-w-sm lg:w-1/2 h-96 lg:h-[520px] lg:max-w-none lg:ml-auto transition-opacity duration-1000 ease-in-out ${showGlobe ? "opacity-100" : "opacity-0"
+              }`}
           >
             {showGlobe && <World data={sampleArcs} globeConfig={globeConfig} />}
           </div>
