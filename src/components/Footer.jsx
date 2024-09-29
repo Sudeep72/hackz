@@ -92,6 +92,11 @@ export default function Footer() {
                 </a>
               </li>
               <li>
+                <a href="#tracks" className="hover:underline">
+                  Tracks
+                </a>
+              </li>
+              <li>
                 <a href="#sponsors" className="hover:underline">
                   Sponsors
                 </a>
@@ -99,11 +104,6 @@ export default function Footer() {
               <li>
                 <a href="#prizes" className="hover:underline">
                   Prizes
-                </a>
-              </li>
-              <li>
-                <a href="#tracks" className="hover:underline">
-                  Tracks
                 </a>
               </li>
               <li>
