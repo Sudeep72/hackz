@@ -14,9 +14,9 @@ export default function MobileNav() {
   const [isOpen, setIsOpen] = useState(false);
   const TABS = [
     "About",
+    "Tracks",
     "Sponsors",
     "Prizes",
-    "Tracks",
     "Timeline",
     "FAQs",
     "Contact",

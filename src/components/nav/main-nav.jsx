@@ -6,9 +6,9 @@ import AnimatedBackground from "@/components/effects/animated-bg";
 export default function MainNav({ isScrolled }) {
   const TABS = [
     "About",
+    "Tracks",
     "Sponsors",
     "Prizes",
-    "Tracks",
     "Timeline",
     "FAQs",
     "Contact",
