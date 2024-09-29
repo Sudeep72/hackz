@@ -5,7 +5,7 @@ import RotateText from "@/components/effects/rotate-text";
 import { LocateFixed } from "lucide-react";
 import Spinner from "@/components/ui/spinner";
 import AnimatedShinyText from "@/components/magicui/animated-shiny-text";
-import HyperText from "@/components/magicui/hyper-text";
+import { LinkPreview } from "@/components/ui/link-preview";
 import ShinyButton from "@/components/magicui/shiny-button";
 import Link from "next/link";
 import { motion } from "framer-motion";
@@ -507,7 +507,7 @@ export default function Home() {
                     strokeWidth={2.5}
                   />
                   <span className="text-xs ml-4 font-medium tracking-widest">
-                    Anna University, Chennai
+                    CEG Campus, Anna University, Chennai
                   </span>
                 </AnimatedShinyText>
               </Link>
@@ -520,21 +520,20 @@ export default function Home() {
               />
             </div>
             <div>
-              <ShimmerButton
-                shimmerColor="#ffffff"
-                shimmerSize="0.05em"
-                borderRadius="100px"
-                shimmerDuration="3s"
-                background="hsl(var(--background))"
-                className="shadow-2xl mt-6"
-              >
-                <span
-                  className="whitespace-pre-wrap text-center text-base font-medium leading-none text-white dark:from-white dark:to-slate-900/10"
-                  disbaled
+            <LinkPreview url="https://unstop.com/p/hackz24-computer-science-and-engineering-association-csea-ceg-anna-university-1171819" className="font-bold">
+                <ShimmerButton
+                  shimmerColor="#ffffff"
+                  shimmerSize="0.05em"
+                  borderRadius="100px"
+                  shimmerDuration="3s"
+                  background="hsl(var(--background))"
+                  className="shadow-2xl mt-6"
                 >
-                  Registrations open Soon!
-                </span>
-              </ShimmerButton>
+                  <span className="whitespace-pre-wrap text-center text-base font-medium leading-none text-white dark:from-white dark:to-slate-900/10">
+                    Register Now
+                  </span>
+                </ShimmerButton>
+              </LinkPreview>
             </div>
           </motion.div>
           <div

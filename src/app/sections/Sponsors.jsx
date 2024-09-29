@@ -29,7 +29,7 @@ export default function Sponsors() {
           <h3 className="text-center text-emerald-500 text-3xl sm:text-4xl md:text-[2.5rem] font-semibold tracking-wide mb-4 sm:mb-6 xl:mb-8">
             Exclusive Sponsor
           </h3>
-          <div className="flex justify-center items-center gap-6 sm:gap-8">
+          <div className="flex justify-center items-center gap-6 sm:gap-8 px-3">
             <a
               href="https://www.temenos.com/"
               target="_blank"
