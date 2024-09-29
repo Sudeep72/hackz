@@ -16,13 +16,13 @@ export default function About() {
       className="flex flex-col justify-center items-center mx-4 mb-48 pt-20"
     >
       <div className="relative h-auto w-full rounded-2xl max-w-4xl p-6 sm:p-8 z-20 mt-12 border-dashed bg-sky-950/20 border-2 border-sky-950/40 backdrop-blur-sm">
-        <h3
+        <h1
           className={
             "text-2xl sm:text-4xl font-semibold mb-6 text-center bg-gradient-to-t bg-clip-text leading-none text-transparent from-sky-200 to-sky-800/90"
           }
         >
           What is HackZ’24?
-        </h3>
+        </h1>
         <p className="tracking-wider text-teal-100/80 sm:leading-8 text-justify sm:text-xl">
           HackZ’24, an initiative by CSEA is a dynamic 24-hour hackathon that
           brings together the brightest minds to solve real-world challenges
