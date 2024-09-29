@@ -21,7 +21,7 @@ export default function Header() {
       initial="hidden"
       animate="show"
       variants={FADE_DOWN_ANIMATION_VARIANTS}
-      className={`fixed top-0 left-0 w-full z-50`}
+      className={`fixed top-0 left-0 w-full z-50 backdrop-blur-lg`}
     >
       <div
         className={`mx-auto max-w-screen-xl transition-all pt-2 ${
@@ -31,7 +31,7 @@ export default function Header() {
         <div
           className={`transition-all rounded-full  duration-300 ${
             isScrolled
-              ? "backdrop-blur-3xl bg-sky-900/20 border-2 border-dashed border-sky-950/40"
+              ? "backdrop-blur-xl bg-sky-900/20 border-2 border-dashed border-sky-950/40"
               : "border-2 border-transparent"
           }`}
         >

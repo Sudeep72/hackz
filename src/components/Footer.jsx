@@ -127,7 +127,7 @@ export default function Footer() {
             <h4 className=" font-bold text-xl bg-gradient-to-b bg-clip-text leading-none text-transparent from-teal-200 to-teal-800/90">
               Contact Us
             </h4>
-            <ul className="mt-4 text-sm tracking-wider text-foreground/80 grid grid-cols-2 sm:grid-cols-1 gap-x-4 gap-y-2">
+            <ul className="mt-4 text-sm tracking-wider text-foreground/80 grid gap-x-4 gap-y-2">
               <li className="flex flex-col space-y-1">
                 <span className="text-base text-sky-300">Sunil Kumar</span>
                 <a href="tel:+91 63831 23505" className="hover:underline">
