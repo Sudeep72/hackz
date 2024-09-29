@@ -11,10 +11,6 @@ const faqData = [
         content: "HackZ ‘24 will be a hybrid event. Round 1 is conducted online while Round 2 will take place physically at Anna University on November 9-10, 2024.",
       },
       {
-        title: "As an individual working in a private company, can I submit a problem statement or challenges?",
-        content: "Unfortunately, HackZ ‘24 is only open to current engineering students. Individuals working in private companies cannot participate.",
-      },
-      {
         title: "What is the maximum size for a team?",
         content: "Teams must consist of 2 to 4 members.",
       },

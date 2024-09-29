@@ -1,10 +1,11 @@
-"use client";;
+"use client";
 import { useEffect, useRef, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 
 import { cn } from "@/lib/utils";
 
-const alphabets = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".split("");
+// Replace alphabets with numbers 0-9
+const numbers = "0123456789".split("");
 
 const getRandomInt = (max) => Math.floor(Math.random() * max);
 
@@ -45,7 +46,8 @@ export default function HyperText({
               ? l
               : i <= interations.current
                 ? text[i]
-                : alphabets[getRandomInt(26)]));
+                : numbers[getRandomInt(10)] // Use numbers instead of alphabets
+          ));
         interations.current = interations.current + 0.1;
       } else {
         setTrigger(false);
