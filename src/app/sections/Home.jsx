@@ -513,8 +513,7 @@ export default function Home() {
               <Link href="https://cseaceg.org.in/" target="_blank">
                 <ShinyButton className="rounded-full mt-3 p-3 bg-cyan-950/10">
                   <span className="text-xs sm:text-sm">
-                    Presented by
-                    ✨{" "}
+                    Proudly hosted by ✨{" "}
                     <span className="font-medium text-cyan-400 tracking-widest">
                       CSEA-CEG
                     </span>{" "}
@@ -532,7 +531,7 @@ export default function Home() {
                 <hr className="mx-2 h-4 w-px shrink-0 bg-gray-300" />{" "}
                 <span
                   className={cn(
-                    `inline animate-gradient bg-gradient-to-r from-[#d16ba5] via-[#86a8e7] to-[#5ffbf1] bg-[length:var(--bg-size)_100%] bg-clip-text text-transparent`,
+                    `inline animate-gradient bg-gradient-to-r from-[#d16ba5] via-[#86a8e7] to-[#5ffbf1] bg-[length:var(--bg-size)_100%] bg-clip-text text-transparent`
                   )}
                 >
                   November 9-10, 2024
@@ -571,7 +570,10 @@ export default function Home() {
             </motion.div>
 
             <div>
-              <LinkPreview url="https://unstop.com/p/hackz24-computer-science-and-engineering-association-csea-ceg-anna-university-1171819" className="font-bold">
+              <LinkPreview
+                url="https://unstop.com/p/hackz24-computer-science-and-engineering-association-csea-ceg-anna-university-1171819"
+                className="font-bold"
+              >
                 <ShimmerButton
                   shimmerColor="#ffffff"
                   shimmerSize="0.05em"
@@ -588,8 +590,9 @@ export default function Home() {
             </div>
           </motion.div>
           <div
-            className={`w-full max-w-sm lg:w-1/2 h-96 lg:h-[520px] lg:max-w-none lg:ml-auto transition-opacity duration-1000 ease-in-out ${showGlobe ? "opacity-100" : "opacity-0"
-              }`}
+            className={`w-full max-w-sm lg:w-1/2 h-96 lg:h-[520px] lg:max-w-none lg:ml-auto transition-opacity duration-1000 ease-in-out ${
+              showGlobe ? "opacity-100" : "opacity-0"
+            }`}
           >
             {showGlobe && <World data={sampleArcs} globeConfig={globeConfig} />}
           </div>
