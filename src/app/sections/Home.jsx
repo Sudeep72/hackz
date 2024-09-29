@@ -497,19 +497,19 @@ export default function Home() {
                 className="text-3xl tracking-widest"
               />
             </div>
-            {/* <motion.div
+            <motion.div
               variants={FADE_UP_ANIMATION_VARIANTS}
               className="text-base tracking-widest normal-case text-cyan-300/70 mx-0"
             >
               Around-the-clock National Hack Fest
-            </motion.div> */}
+            </motion.div>
             {/* <motion.div
               variants={FADE_UP_ANIMATION_VARIANTS}
               className="text-base tracking-widest normal-case text-cyan-300/70 mx-0"
             >
               November 9-10, 2024
             </motion.div> */}
-             <motion.div variants={FADE_UP_ANIMATION_VARIANTS}>
+            <motion.div variants={FADE_UP_ANIMATION_VARIANTS}>
               <Link href="https://cseaceg.org.in/" target="_blank">
                 <ShinyButton className="rounded-full mt-3 p-3 bg-cyan-950/10">
                   <span className="text-xs sm:text-sm">
@@ -524,10 +524,10 @@ export default function Home() {
             </motion.div>
             <div className="z-0 flex mt-4 mb-4 items-center justify-center">
               <AnimatedGradientText>
-              <CalendarDays
-                    className="absolute left-2 top-1/2 transform -translate-y-1/2 pr-1"
-                    size={16}
-                    strokeWidth={2.5}
+                <CalendarDays
+                  className="absolute left-2 top-1/2 transform -translate-y-1/2 pr-1"
+                  size={16}
+                  strokeWidth={2.5}
                 />
                 <hr className="mx-2 h-4 w-px shrink-0 bg-gray-300" />{" "}
                 <span
