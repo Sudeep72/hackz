@@ -501,8 +501,11 @@ export default function Home() {
               variants={FADE_UP_ANIMATION_VARIANTS}
               className="flex items-center text-base tracking-widest normal-case text-cyan-300/70 mx-0"
             >
-              <Code color="#2AD3DF" className="mr-2" />
-              | 24-Hour National Tech Marathon: Innovate, Create, Dominate!
+              <span className="flex items-center">
+                <Code color="#2AD3DF" />
+                <span className="ml-2 mr-1.5 sm:mx-1">|</span>
+              </span>
+              24-Hour National Tech Marathon: Innovate, Create, Dominate!
             </motion.div>
             {/* <motion.div
               variants={FADE_UP_ANIMATION_VARIANTS}

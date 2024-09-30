@@ -1,5 +1,6 @@
 import React, { useRef } from "react";
 import { motion, useInView } from "framer-motion";
+import Link from "next/link";
 
 export default function About() {
   const ref = useRef(null);
@@ -24,7 +25,7 @@ export default function About() {
           What is HackZ’24?
         </h1>
         <p className="tracking-wider text-teal-100/80 sm:leading-8 text-justify sm:text-xl">
-          HackZ’24, an initiative by CSEA is a dynamic 24-hour hackathon that
+          HackZ’24, an initiative by <Link href="https://cseaceg.org.in" target="_blank" className="font-bold">CSEA</Link> is a dynamic 24-hour hackathon that
           brings together the brightest minds to solve real-world challenges
           through technology and innovation. Open to engineering students, the
           hackathon encourages collaboration and out-of-the-box thinking,

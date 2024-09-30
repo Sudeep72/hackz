@@ -24,71 +24,69 @@ export default function Prize() {
         <div className="flex flex-col gap-8 w-full items-center">
           {/* Prize Pool */}
           <ShineBorder
-            className="relative p-6 text-center w-full max-w-lg bg-gray-800 rounded-xl border border-gray-600 shadow-lg hover:shadow-2xl transform transition-transform duration-300 ease-in-out hover:scale-105 hover:translate-y-1"
+            className="relative p-6 text-center w-full max-w-md bg-gray-800 rounded-xl border border-gray-600 shadow-lg hover:shadow-2xl transform transition-transform duration-300 ease-in-out hover:scale-105 hover:translate-y-1"
             color={["#FFD700", "#00BFFF", "#FF8C00"]}
           >
             <h3 className="text-xl mb-2 text-yellow-400"> Prize Pool </h3>
             <HyperText
-              className="text-6xl font-bold text-yellow-400"
+              className="text-5xl font-bold text-yellow-400"
               text="₹ 1,70,000"
             />
           </ShineBorder>
 
           {/* Prizes */}
-          <div className="flex flex-col md:flex-row gap-4 w-full max-w-6xl">
+          <div className="flex flex-col md:flex-row gap-4 w-full max-w-full md:max-w-5xl">
             <ShineBorder
-              className="relative p-6 text-center flex-1 bg-gray-800 rounded-xl border border-gray-600 shadow-lg hover:shadow-2xl transform transition-transform duration-300 ease-in-out hover:scale-105 hover:translate-y-1"
+              className="relative p-6 text-center flex-1 w-full bg-gray-800 rounded-xl border border-gray-600 shadow-lg hover:shadow-2xl transform transition-transform duration-300 ease-in-out hover:scale-105 hover:translate-y-1"
               color={["#FE8FB5", "#00FFFF", "#FF1493"]}
             >
               <h3 className="text-xl mb-2 text-red-400"> 1st Prize </h3>
               <HyperText
-                className="text-5xl font-bold text-red-400 w-full"
+                className="text-4xl font-bold text-red-400 w-full"
                 text="₹ 75,000"
               />
             </ShineBorder>
 
             <ShineBorder
-              className="relative p-6 text-center flex-1 bg-gray-800 rounded-xl border border-gray-600 shadow-lg hover:shadow-2xl transform transition-transform duration-300 ease-in-out hover:scale-105 hover:translate-y-1"
+              className="relative p-6 text-center flex-1 w-full bg-gray-800 rounded-xl border border-gray-600 shadow-lg hover:shadow-2xl transform transition-transform duration-300 ease-in-out hover:scale-105 hover:translate-y-1"
               color={["#00FF00", "#FF4500", "#32CD32"]}
             >
               <h3 className="text-xl mb-2 text-lime-400"> 2nd Prize </h3>
               <HyperText
-                className="text-5xl font-bold text-lime-400 w-full"
+                className="text-4xl font-bold text-lime-400 w-full"
                 text="₹ 50,000"
               />
             </ShineBorder>
 
             <ShineBorder
-              className="relative p-6 text-center flex-1 bg-gray-800 rounded-xl border border-gray-600 shadow-lg hover:shadow-2xl transform transition-transform duration-300 ease-in-out hover:scale-105 hover:translate-y-1"
+              className="relative p-6 text-center flex-1 w-full bg-gray-800 rounded-xl border border-gray-600 shadow-lg hover:shadow-2xl transform transition-transform duration-300 ease-in-out hover:scale-105 hover:translate-y-1"
               color={["#4B0082", "#FFD700", "#9370DB"]}
             >
               <h3 className="text-xl mb-2 text-purple-400"> 3rd Prize </h3>
               <HyperText
-                className="text-5xl font-bold text-purple-400 w-full"
+                className="text-4xl font-bold text-purple-400 w-full"
                 text="₹ 25,000"
               />
             </ShineBorder>
           </div>
 
           {/* Special Awards */}
-          <div className="flex flex-col md:flex-row gap-8 max-w-2xl">
+          <div className="flex flex-col md:flex-row gap-8 w-full max-w-md">
             <ShineBorder
-              className="relative p-6 text-center flex-1 bg-gray-800 rounded-xl border border-gray-600 shadow-lg hover:shadow-2xl transform transition-transform duration-300 ease-in-out hover:scale-105 hover:translate-y-1"
+              className="relative p-6 text-center flex-1 w-full bg-gray-800 rounded-xl border border-gray-600 shadow-lg hover:shadow-2xl transform transition-transform duration-300 ease-in-out hover:scale-105 hover:translate-y-1"
               color={["#FF69B4", "#7FFF00", "#FF1493"]}
             >
-              <h3 className="text-xl mb-2 text-pink-400">
-                The Best Women&apos;s Team
-              </h3>
+              <h3 className="text-xl mb-2 text-pink-400">Empowering Women</h3>
               <p className="text-3xl font-bold text-pink-400">
-                ♀ Women&apos;s Team
+                ♀ Leading Women&apos;s Team
               </p>
             </ShineBorder>
           </div>
 
           {/* Track Prize */}
-          <div className="flex flex-col md:flex-row gap-8 w-full max-w-4xl">
+          <div className="flex flex-col md:flex-row gap-8 w-full max-w-full md:max-w-3xl">
             <ShineBorder
-              className="relative p-6 text-center flex-1 bg-gray-800 rounded-xl border border-gray-600 shadow-lg hover:shadow-2xl transform transition-transform duration-300 ease-in-out hover:scale-105 hover:translate-y-1"
+              className="relative p-6 text-center flex-1 w-full bg-gray-800 rounded-xl border border-gray-600 shadow-lg hover:shadow-2xl transform transition-transform duration-300 ease-in-out hover:scale-105 hover:translate-y-1"
               color={["#1E90FF", "#FFD700", "#FF6347"]}
             >
               <h3 className="text-3xl font-bold text-blue-400">
@@ -97,7 +95,7 @@ export default function Prize() {
             </ShineBorder>
 
             <ShineBorder
-              className="relative p-6 text-center flex-1 bg-gray-800 rounded-xl border border-gray-600 shadow-lg hover:shadow-2xl transform transition-transform duration-300 ease-in-out hover:scale-105 hover:translate-y-1"
+              className="relative p-6 text-center flex-1 w-full bg-gray-800 rounded-xl border border-gray-600 shadow-lg hover:shadow-2xl transform transition-transform duration-300 ease-in-out hover:scale-105 hover:translate-y-1"
               color={["#00BFFF", "#FF6347", "#32CD32"]}
             >
               <h3 className="text-3xl font-bold text-blue-400">Track Prize</h3>

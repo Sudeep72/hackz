@@ -20,7 +20,7 @@ const ref = useRef(null);
 const isInView = useInView(ref, { once: true });
   const data = [
     {
-      title: "29 September ",
+      title: "30 September ",
       content: (
         <div className="space-y-2 mb-9">
           <AnimatedText>
