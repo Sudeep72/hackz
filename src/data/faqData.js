@@ -34,10 +34,6 @@ const faqData = [
         title: "Will there be networking opportunities with industry professionals?",
         content: "Yes, participants will have opportunities to network with mentors, sponsors, and industry experts throughout the event.",
       },
-      {
-        title: "Is being a student a requirement for participation?",
-        content: "Yes, only students currently enrolled in engineering colleges in India are eligible to participate.",
-      },
     ],
   },
   {
