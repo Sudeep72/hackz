@@ -4,11 +4,11 @@ const faqData = [
     faqs: [
       {
         title: "Who is eligible to take part in HackZ ‘24?",
-        content: "HackZ ‘24 is a national-level hackathon open to all current students enrolled in engineering colleges across India. Teams can have members from different institutions.",
+        content: "HackZ ‘24 is a national-level hackathon open to all current students enrolled in colleges across India. Teams can have members from different institutions.",
       },
       {
         title: "Will HackZ ‘24 be held online, in person, or both?",
-        content: "HackZ ‘24 will be a hybrid event. Round 1 is conducted online while Round 2 will take place physically at Anna University on November 9-10, 2024.",
+        content: "HackZ ‘24 will be a hybrid event. Round 1 is conducted online while Round 2 will take place physically at CEG campus, Anna University on November 9-10, 2024.",
       },
       {
         title: "What is the maximum size for a team?",
@@ -20,7 +20,7 @@ const faqData = [
       },
       {
         title: "Is being a student a requirement for participation?",
-        content: "Yes, only students currently enrolled in engineering colleges in India are eligible to participate.",
+        content: "Yes, only students currently enrolled in colleges in India are eligible to participate.",
       },
       {
         title: "How do I register for the hackathon?",
