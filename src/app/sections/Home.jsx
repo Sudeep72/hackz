@@ -549,7 +549,7 @@ export default function Home() {
                       `inline animate-gradient bg-gradient-to-r from-[#d16ba5] via-[#86a8e7] to-[#5ffbf1] bg-[length:var(--bg-size)_100%] bg-clip-text text-transparent`
                     )}
                   >
-                    November 9-10, 2024
+                    November 23-24, 2024
                   </span>
                   {/* <ChevronRight className="ml-1 size-3 transition-transform duration-300 ease-in-out group-hover:translate-x-0.5" /> */}
                 </AnimatedGradientText>
