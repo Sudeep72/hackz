@@ -41,7 +41,7 @@ const isInView = useInView(ref, { once: true });
       ),
     },
     {
-      title: "30 October",
+      title: "31 October",
       content: (
         <div className="space-y-2 mb-9">
           <AnimatedText>
