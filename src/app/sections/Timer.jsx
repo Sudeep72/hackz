@@ -5,7 +5,7 @@ import confetti from "canvas-confetti";
 import GridPattern from "@/components/magicui/grid-pattern";
 import { cn } from "@/lib/utils";
 
-const endDate = new Date("2024-11-24T06:32:00+05:30");
+const endDate = new Date("2024-11-24T10:15:00+05:30");
 
 const calculateTimeRemaining = (endDate) => {
   const now = new Date();
