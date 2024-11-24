@@ -41,7 +41,7 @@ const isInView = useInView(ref, { once: true });
       ),
     },
     {
-      title: "20 October",
+      title: "31 October",
       content: (
         <div className="space-y-2 mb-9">
           <AnimatedText>
@@ -61,7 +61,7 @@ const isInView = useInView(ref, { once: true });
       ),
     },
     {
-      title: "26 October",
+      title: "10 November",
       content: (
         <div className="space-y-2 mb-9">
           <AnimatedText>
@@ -80,7 +80,7 @@ const isInView = useInView(ref, { once: true });
       ),
     },
     {
-      title: "2 November",
+      title: "16 November",
       content: (
         <div className="space-y-2 mb-9">
           <AnimatedText>
@@ -100,7 +100,7 @@ const isInView = useInView(ref, { once: true });
       ),
     },
     {
-      title: "9 November",
+      title: "23 November",
       content: (
         <div className="space-y-2 mb-9">
           <AnimatedText>
@@ -120,7 +120,7 @@ const isInView = useInView(ref, { once: true });
       ),
     },
     {
-      title: "10 November",
+      title: "24 November",
       content: (
         <div className="space-y-2 mb-9">
           <AnimatedText>

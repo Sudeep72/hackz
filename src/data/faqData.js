@@ -8,7 +8,7 @@ const faqData = [
       },
       {
         title: "Will HackZ ‘24 be held online, in person, or both?",
-        content: "HackZ ‘24 will be a hybrid event. Round 1 is conducted online while Round 2 will take place physically at CEG campus, Anna University on November 9-10, 2024.",
+        content: "HackZ ‘24 will be a hybrid event. Round 1 is conducted online while Round 2 will take place physically at CEG campus, Anna University on November 23-24, 2024.",
       },
       {
         title: "What is the maximum size for a team?",
