@@ -2,7 +2,7 @@
 import React, { useEffect, useState } from "react";
 import dynamic from "next/dynamic";
 import RotateText from "@/components/effects/rotate-text";
-import { LocateFixed, CalendarDays, Code } from "lucide-react";
+import { LocateFixed, CalendarDays, Code, UserPen } from "lucide-react";
 import Spinner from "@/components/ui/spinner";
 import AnimatedShinyText from "@/components/magicui/animated-shiny-text";
 import { LinkPreview } from "@/components/ui/link-preview";
@@ -585,7 +585,10 @@ export default function Home() {
               </Link>
             </motion.div>
             <motion.div variants={FADE_UP_ANIMATION_VARIANTS}>
-              <div>
+              <div className="flex items-center gap-x-4">
+                {" "}
+                {/* Flex container with spacing */}
+                {/* Register Now Button */}
                 <LinkPreview
                   url="https://unstop.com/p/hackz24-computer-science-and-engineering-association-csea-ceg-anna-university-1171819"
                   className="font-bold"
@@ -596,11 +599,23 @@ export default function Home() {
                     borderRadius="100px"
                     shimmerDuration="3s"
                     background="hsl(var(--background))"
-                    className="shadow-2xl mt-3"
+                    className="shadow-2xl"
                   >
                     <span className="whitespace-pre-wrap text-center text-base font-medium leading-none text-white dark:from-white dark:to-slate-900/10">
                       Register Now
                     </span>
+                  </ShimmerButton>
+                </LinkPreview>
+                <LinkPreview url="https://sudeepdev.co" className="font-light">
+                  <ShimmerButton
+                    shimmerColor="#ffffff"
+                    shimmerSize="0.05em"
+                    borderRadius="100px"
+                    shimmerDuration="3s"
+                    background="hsl(var(--background))"
+                    className="shadow-2xl flex items-center px-3 py-2 text-sm"
+                  >
+                    <UserPen size={14} color="#ffffff" />
                   </ShimmerButton>
                 </LinkPreview>
               </div>
