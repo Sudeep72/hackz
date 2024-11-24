@@ -1,10 +1,11 @@
 "use client";
 import React, { useState, useEffect, useRef } from "react";
 import { useInView } from "framer-motion";
+import confetti from "canvas-confetti";
 import GridPattern from "@/components/magicui/grid-pattern";
 import { cn } from "@/lib/utils";
 
-const endDate = new Date("2023-11-24T06:09:00+05:30");
+const endDate = new Date("2024-11-24T06:32:00+05:30");
 
 const calculateTimeRemaining = (endDate) => {
   const now = new Date();
@@ -38,6 +39,36 @@ export function TimerComponent() {
   );
   const [isExpired, setIsExpired] = useState(false);
 
+  const triggerConfetti = () => {
+    const end = Date.now() + 60 * 1000;
+    const colors = ["#a786ff", "#fd8bbc", "#eca184", "#f8deb1"];
+
+    const frame = () => {
+      if (Date.now() > end) return;
+
+      confetti({
+        particleCount: 2,
+        angle: 60,
+        spread: 55,
+        startVelocity: 60,
+        origin: { x: 0, y: 0.5 },
+        colors: colors,
+      });
+      confetti({
+        particleCount: 2,
+        angle: 120,
+        spread: 55,
+        startVelocity: 60,
+        origin: { x: 1, y: 0.5 },
+        colors: colors,
+      });
+
+      requestAnimationFrame(frame);
+    };
+
+    frame();
+  };
+
   useEffect(() => {
     const timer = setInterval(() => {
       const updatedTime = calculateTimeRemaining(endDate);
@@ -45,6 +76,7 @@ export function TimerComponent() {
 
       if (!updatedTime) {
         setIsExpired(true);
+        triggerConfetti(); // Trigger confetti on expiration
         clearInterval(timer); // Stop the timer if time has expired
       } else if (
         updatedTime.hours === "00" &&
@@ -52,7 +84,8 @@ export function TimerComponent() {
         updatedTime.seconds === "00"
       ) {
         setIsExpired(true);
-        clearInterval(timer); // Stop the timer on exact expiry
+        triggerConfetti(); // Trigger confetti on exact expiry
+        clearInterval(timer); // Stop the timer
       } else {
         setTimeRemaining(updatedTime);
       }
